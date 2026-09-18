@@ -486,6 +486,8 @@
     // 定数
     // =========================================================
     const STORAGE_KEY = "parts-price-tool-products";
+    const CATALOG_VERSION_KEY = "parts-price-tool-catalog-version";
+    const CATALOG_VERSION = "2026-09-18-02";
     const MAX_SEARCH_STATES = 100000;
     const PRICE_FORMATTER = new Intl.NumberFormat("ja-JP");
 
@@ -576,9 +578,10 @@
     // 2回目以降はユーザーが編集・追加したブラウザ保存データを優先します。
     // =========================================================
     async function loadInitialCatalogIfNeeded() {
-      const hasSavedProducts = !!products.length;
+      const savedCatalogVersion = localStorage.getItem(CATALOG_VERSION_KEY);
+      const isCatalogCurrent = savedCatalogVersion === CATALOG_VERSION;
 
-      if (hasSavedProducts) {
+      if (isCatalogCurrent && !!products.length) {
         return;
       }
 
@@ -592,13 +595,14 @@
         }
 
         const catalogProducts = await response.json();
-        const isValidCatalog = Array.isArray(catalogProducts) && !!catalogProducts.length;
+        const isValidCatalog =
+          Array.isArray(catalogProducts) && !!catalogProducts.length;
 
         if (!isValidCatalog) {
           throw new Error("商品データが空、または形式が不正です。");
         }
 
-        products = catalogProducts
+        const normalizedCatalogProducts = catalogProducts
           .map((product) => {
             const name = String(product?.name || "").trim();
             const price = Number(product?.price);
@@ -622,7 +626,20 @@
           })
           .filter((product) => !!product);
 
+        // source- で始まるIDは配布カタログ商品です。
+        // カタログ更新時はそれだけを最新データへ差し替え、
+        // ユーザーが手入力した商品はそのまま残します。
+        const manualProducts = products.filter(
+          (product) => !product.id.startsWith("source-")
+        );
+
+        products = [
+          ...normalizedCatalogProducts,
+          ...manualProducts,
+        ];
+
         saveProducts();
+        localStorage.setItem(CATALOG_VERSION_KEY, CATALOG_VERSION);
       } catch (error) {
         console.error("初期商品データの読み込みに失敗しました。", error);
       }
