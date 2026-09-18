@@ -1854,7 +1854,19 @@
     "price": 2600,
     "parts": [
       {
-        "name": "ペガサスブラストATr",
+        "name": "ペガサス",
+        "quantity": 1
+      },
+      {
+        "name": "ブラスト",
+        "quantity": 1
+      },
+      {
+        "name": "A",
+        "quantity": 1
+      },
+      {
+        "name": "Tr",
         "quantity": 1
       },
       {
@@ -1872,8 +1884,12 @@
     "price": 9600,
     "parts": [
       {
-        "name": "ケルベロスフレイムW",
+        "name": "ケルベロスフレイム",
         "quantity": 1
+      },
+      {
+        "name": "W(ウィール)",
+        "quantity": 2
       },
       {
         "name": "5-80",
@@ -1896,7 +1912,7 @@
         "quantity": 1
       },
       {
-        "name": "ケルベロスダークW",
+        "name": "ケルベロスダーク",
         "quantity": 1
       },
       {
@@ -2482,7 +2498,11 @@
     "price": 2600,
     "parts": [
       {
-        "name": "バレットグリフォンH",
+        "name": "バレットグリフォン",
+        "quantity": 1
+      },
+      {
+        "name": "H",
         "quantity": 1
       },
       {
@@ -2595,7 +2615,11 @@
     "price": 4800,
     "parts": [
       {
-        "name": "ブラキオウィップOW",
+        "name": "ブラキオウィップO",
+        "quantity": 3
+      },
+      {
+        "name": "W(ウィール)",
         "quantity": 3
       },
       {
@@ -2634,7 +2658,11 @@
     "price": 2700,
     "parts": [
       {
-        "name": "グローリーワルキューレLF",
+        "name": "グローリーワルキューレ",
+        "quantity": 1
+      },
+      {
+        "name": "LF",
         "quantity": 1
       },
       {
