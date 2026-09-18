@@ -1,0 +1,3616 @@
+[
+  {
+    "id": "source-bx-01",
+    "name": "BX-01 スターター ドランソード3-60F",
+    "price": 1980,
+    "parts": [
+      {
+        "name": "ドランソード",
+        "quantity": 1
+      },
+      {
+        "name": "3-60",
+        "quantity": 1
+      },
+      {
+        "name": "F",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item01.htm#bx01"
+  },
+  {
+    "id": "source-bx-02",
+    "name": "BX-02 スターター ヘルズサイズ4-60T",
+    "price": 1980,
+    "parts": [
+      {
+        "name": "ヘルズサイズ",
+        "quantity": 1
+      },
+      {
+        "name": "4-60",
+        "quantity": 1
+      },
+      {
+        "name": "T",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item01.htm#bx02"
+  },
+  {
+    "id": "source-bx-03",
+    "name": "BX-03 スターター ウィザードアロー4-80B",
+    "price": 1980,
+    "parts": [
+      {
+        "name": "ウィザードアロー",
+        "quantity": 1
+      },
+      {
+        "name": "4-80",
+        "quantity": 1
+      },
+      {
+        "name": "B",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item01.htm#bx03"
+  },
+  {
+    "id": "source-bx-04",
+    "name": "BX-04 スターター ナイトシールド3-80N",
+    "price": 1980,
+    "parts": [
+      {
+        "name": "ナイトシールド",
+        "quantity": 1
+      },
+      {
+        "name": "3-80",
+        "quantity": 1
+      },
+      {
+        "name": "N",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item01.htm#bx04"
+  },
+  {
+    "id": "source-bx-05",
+    "name": "BX-05 ブースター ウィザードアロー4-80B",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ウィザードアロー",
+        "quantity": 1
+      },
+      {
+        "name": "4-80",
+        "quantity": 1
+      },
+      {
+        "name": "B",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item01.htm#bx05"
+  },
+  {
+    "id": "source-bx-07",
+    "name": "BX-07 スタートダッシュセット",
+    "price": 5720,
+    "parts": [
+      {
+        "name": "ドランソード",
+        "quantity": 1
+      },
+      {
+        "name": "3-60",
+        "quantity": 1
+      },
+      {
+        "name": "F",
+        "quantity": 1
+      },
+      {
+        "name": "ストリングランチャー",
+        "quantity": 1
+      },
+      {
+        "name": "ランチャーグリップ",
+        "quantity": 1
+      },
+      {
+        "name": "エクストリームスタジアム",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item01.htm#bx07"
+  },
+  {
+    "id": "source-bx-08",
+    "name": "BX-08 3on3デッキセット",
+    "price": 3960,
+    "parts": [
+      {
+        "name": "ヘルズサイズ",
+        "quantity": 1
+      },
+      {
+        "name": "3-80",
+        "quantity": 1
+      },
+      {
+        "name": "B",
+        "quantity": 1
+      },
+      {
+        "name": "ウィザードアロー",
+        "quantity": 1
+      },
+      {
+        "name": "4-60",
+        "quantity": 1
+      },
+      {
+        "name": "N",
+        "quantity": 1
+      },
+      {
+        "name": "ナイトシールド",
+        "quantity": 1
+      },
+      {
+        "name": "4-80",
+        "quantity": 1
+      },
+      {
+        "name": "T",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item02.htm#bx08"
+  },
+  {
+    "id": "source-bx-09",
+    "name": "BX-09 ベイバトルパス",
+    "price": 3300,
+    "parts": [
+      {
+        "name": "ベイバトルパス",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item02.htm#bx09"
+  },
+  {
+    "id": "source-bx-10",
+    "name": "BX-10 エクストリームスタジアム",
+    "price": 2750,
+    "parts": [
+      {
+        "name": "エクストリームスタジアム",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item02.htm#bx10"
+  },
+  {
+    "id": "source-bx-11",
+    "name": "BX-11 ランチャーグリップ",
+    "price": 700,
+    "parts": [
+      {
+        "name": "ランチャーグリップ",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item02.htm#bx11"
+  },
+  {
+    "id": "source-bx-12",
+    "name": "BX-12 3on3デッキケース",
+    "price": 990,
+    "parts": [
+      {
+        "name": "3on3デッキケース",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item02.htm#bx12"
+  },
+  {
+    "id": "source-bx-13",
+    "name": "BX-13 ブースター ナイトランス4-80HN",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ナイトランス",
+        "quantity": 1
+      },
+      {
+        "name": "4-80",
+        "quantity": 1
+      },
+      {
+        "name": "HN",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item02.htm#bx13"
+  },
+  {
+    "id": "source-bx-14-01",
+    "name": "BX-14 ランダムブースターVol.1 / シャークエッジ3-60LF",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "シャークエッジ",
+        "quantity": 1
+      },
+      {
+        "name": "3-60",
+        "quantity": 1
+      },
+      {
+        "name": "LF",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item02.htm#bx14"
+  },
+  {
+    "id": "source-bx-14-02",
+    "name": "BX-14 ランダムブースターVol.1 / シャークエッジ4-80N",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "シャークエッジ",
+        "quantity": 1
+      },
+      {
+        "name": "4-80",
+        "quantity": 1
+      },
+      {
+        "name": "N",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item02.htm#bx14"
+  },
+  {
+    "id": "source-bx-14-03",
+    "name": "BX-14 ランダムブースターVol.1 / ドランソード3-80B",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ドランソード",
+        "quantity": 1
+      },
+      {
+        "name": "3-80",
+        "quantity": 1
+      },
+      {
+        "name": "B",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item02.htm#bx14"
+  },
+  {
+    "id": "source-bx-14-04",
+    "name": "BX-14 ランダムブースターVol.1 / ヘルズサイズ4-80LF",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ヘルズサイズ",
+        "quantity": 1
+      },
+      {
+        "name": "4-80",
+        "quantity": 1
+      },
+      {
+        "name": "LF",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item02.htm#bx14"
+  },
+  {
+    "id": "source-bx-14-05",
+    "name": "BX-14 ランダムブースターVol.1 / ナイトシールド4-60LF",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ナイトシールド",
+        "quantity": 1
+      },
+      {
+        "name": "4-60",
+        "quantity": 1
+      },
+      {
+        "name": "LF",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item02.htm#bx14"
+  },
+  {
+    "id": "source-bx-14-06",
+    "name": "BX-14 ランダムブースターVol.1 / ウィザードアロー3-60T",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ウィザードアロー",
+        "quantity": 1
+      },
+      {
+        "name": "3-60",
+        "quantity": 1
+      },
+      {
+        "name": "T",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item02.htm#bx14"
+  },
+  {
+    "id": "source-bx-15",
+    "name": "BX-15 スターター レオンクロー5-60P",
+    "price": 1980,
+    "parts": [
+      {
+        "name": "レオンクロー",
+        "quantity": 1
+      },
+      {
+        "name": "5-60",
+        "quantity": 1
+      },
+      {
+        "name": "P",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item03.htm#bx15"
+  },
+  {
+    "id": "source-bx-17",
+    "name": "BX-17 バトルエントリーセット",
+    "price": 6050,
+    "parts": [
+      {
+        "name": "ドランソード",
+        "quantity": 1
+      },
+      {
+        "name": "3-60",
+        "quantity": 1
+      },
+      {
+        "name": "F",
+        "quantity": 1
+      },
+      {
+        "name": "ウィザードアロー",
+        "quantity": 1
+      },
+      {
+        "name": "4-80",
+        "quantity": 1
+      },
+      {
+        "name": "B",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 2
+      },
+      {
+        "name": "エクストリームスタジアム",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item03.htm#bx17"
+  },
+  {
+    "id": "source-bx-18",
+    "name": "BX-18 ストリングランチャー",
+    "price": 990,
+    "parts": [
+      {
+        "name": "ストリングランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item03.htm#bx18"
+  },
+  {
+    "id": "source-bx-19",
+    "name": "BX-19 ブースター ライノホーン3-80S",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ライノホーン",
+        "quantity": 1
+      },
+      {
+        "name": "3-80",
+        "quantity": 1
+      },
+      {
+        "name": "S",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item03.htm#bx19"
+  },
+  {
+    "id": "source-bx-21",
+    "name": "BX-21 ヘルズチェイン デッキセット",
+    "price": 3860,
+    "parts": [
+      {
+        "name": "ヘルズチェイン",
+        "quantity": 1
+      },
+      {
+        "name": "5-60",
+        "quantity": 1
+      },
+      {
+        "name": "HT",
+        "quantity": 1
+      },
+      {
+        "name": "ナイトランス",
+        "quantity": 1
+      },
+      {
+        "name": "3-60",
+        "quantity": 1
+      },
+      {
+        "name": "LF",
+        "quantity": 1
+      },
+      {
+        "name": "ウィザードアロー",
+        "quantity": 1
+      },
+      {
+        "name": "4-80",
+        "quantity": 1
+      },
+      {
+        "name": "N",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item03.htm#bx21"
+  },
+  {
+    "id": "source-bx-23",
+    "name": "BX-23 スターター フェニックスウイング9-60GF",
+    "price": 2420,
+    "parts": [
+      {
+        "name": "フェニックスウイング",
+        "quantity": 1
+      },
+      {
+        "name": "9-60",
+        "quantity": 1
+      },
+      {
+        "name": "GF",
+        "quantity": 1
+      },
+      {
+        "name": "ストリングランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item04.htm#bx23"
+  },
+  {
+    "id": "source-bx-24-01",
+    "name": "BX-24 ランダムブースターVol.2 / ワイバーンゲイル5-80GB",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ワイバーンゲイル",
+        "quantity": 1
+      },
+      {
+        "name": "5-80",
+        "quantity": 1
+      },
+      {
+        "name": "GB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item04.htm#bx24"
+  },
+  {
+    "id": "source-bx-24-02",
+    "name": "BX-24 ランダムブースターVol.2 / ワイバーンゲイル3-60T",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ワイバーンゲイル",
+        "quantity": 1
+      },
+      {
+        "name": "3-60",
+        "quantity": 1
+      },
+      {
+        "name": "T",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item04.htm#bx24"
+  },
+  {
+    "id": "source-bx-24-03",
+    "name": "BX-24 ランダムブースターVol.2 / ナイトランス4-60GB",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ナイトランス",
+        "quantity": 1
+      },
+      {
+        "name": "4-60",
+        "quantity": 1
+      },
+      {
+        "name": "GB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item04.htm#bx24"
+  },
+  {
+    "id": "source-bx-24-04",
+    "name": "BX-24 ランダムブースターVol.2 / ヴァイパーテイル5-60F",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ヴァイパーテイル",
+        "quantity": 1
+      },
+      {
+        "name": "5-60",
+        "quantity": 1
+      },
+      {
+        "name": "F",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item04.htm#bx24"
+  },
+  {
+    "id": "source-bx-24-05",
+    "name": "BX-24 ランダムブースターVol.2 / レオンクロー3-80HN",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "レオンクロー",
+        "quantity": 1
+      },
+      {
+        "name": "3-80",
+        "quantity": 1
+      },
+      {
+        "name": "HN",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item04.htm#bx24"
+  },
+  {
+    "id": "source-bx-24-06",
+    "name": "BX-24 ランダムブースターVol.2 / ウィザードアロー4-80GB",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ウィザードアロー",
+        "quantity": 1
+      },
+      {
+        "name": "4-80",
+        "quantity": 1
+      },
+      {
+        "name": "GB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item04.htm#bx24"
+  },
+  {
+    "id": "source-bx-25",
+    "name": "BX-25 ギヤケース",
+    "price": 4000,
+    "parts": [
+      {
+        "name": "ギヤケース",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item04.htm#bx25"
+  },
+  {
+    "id": "source-bx-26",
+    "name": "BX-26 ブースター ユニコーンスティング5-60GP",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ユニコーンスティング",
+        "quantity": 1
+      },
+      {
+        "name": "5-60",
+        "quantity": 1
+      },
+      {
+        "name": "GP",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item04.htm#bx26"
+  },
+  {
+    "id": "source-bx-27-01",
+    "name": "BX-27 ランダムブースター スフィンクスカウルセレクト / スフィンクスカウル9-80GN",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "スフィンクスカウル",
+        "quantity": 1
+      },
+      {
+        "name": "9-80",
+        "quantity": 1
+      },
+      {
+        "name": "GN",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item04.htm#bx27"
+  },
+  {
+    "id": "source-bx-27-02",
+    "name": "BX-27 ランダムブースター スフィンクスカウルセレクト / スフィンクスカウル4-80HT",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "スフィンクスカウル",
+        "quantity": 1
+      },
+      {
+        "name": "4-80",
+        "quantity": 1
+      },
+      {
+        "name": "HT",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item04.htm#bx27"
+  },
+  {
+    "id": "source-bx-27-03",
+    "name": "BX-27 ランダムブースター スフィンクスカウルセレクト / スフィンクスカウル5-60O",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "スフィンクスカウル",
+        "quantity": 1
+      },
+      {
+        "name": "5-60",
+        "quantity": 1
+      },
+      {
+        "name": "O",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item04.htm#bx27"
+  },
+  {
+    "id": "source-ux-01",
+    "name": "UX-01 スターター ドランバスター1-60A",
+    "price": 1980,
+    "parts": [
+      {
+        "name": "ドランバスター",
+        "quantity": 1
+      },
+      {
+        "name": "1-60",
+        "quantity": 1
+      },
+      {
+        "name": "A",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item05.htm#ux01"
+  },
+  {
+    "id": "source-ux-02",
+    "name": "UX-02 スターター ヘルズハンマー3-70H",
+    "price": 1980,
+    "parts": [
+      {
+        "name": "ヘルズハンマー",
+        "quantity": 1
+      },
+      {
+        "name": "3-70",
+        "quantity": 1
+      },
+      {
+        "name": "H",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item05.htm#ux02"
+  },
+  {
+    "id": "source-ux-03",
+    "name": "UX-03 ブースター ウィザードロッド5-70DB",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ウィザードロッド",
+        "quantity": 1
+      },
+      {
+        "name": "5-70",
+        "quantity": 1
+      },
+      {
+        "name": "DB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item05.htm#ux03"
+  },
+  {
+    "id": "source-bx-28",
+    "name": "BX-28 ストリングランチャー ホワイトVer.",
+    "price": 990,
+    "parts": [
+      {
+        "name": "ストリングランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item05.htm#bx28"
+  },
+  {
+    "id": "source-bx-29",
+    "name": "BX-29 カスタムグリップ ホワイトVer.",
+    "price": 1100,
+    "parts": [
+      {
+        "name": "カスタムグリップ",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item05.htm#bx29"
+  },
+  {
+    "id": "source-bx-30",
+    "name": "BX-30 カスタムグリップ レッドVer.",
+    "price": 1100,
+    "parts": [
+      {
+        "name": "カスタムグリップ",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item05.htm#bx30"
+  },
+  {
+    "id": "source-ux-04",
+    "name": "UX-04 バトルエントリーセットＵ",
+    "price": 6050,
+    "parts": [
+      {
+        "name": "ドランバスター",
+        "quantity": 1
+      },
+      {
+        "name": "1-60",
+        "quantity": 1
+      },
+      {
+        "name": "A",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 2
+      },
+      {
+        "name": "ウィザードロッド",
+        "quantity": 1
+      },
+      {
+        "name": "5-70",
+        "quantity": 1
+      },
+      {
+        "name": "DB",
+        "quantity": 1
+      },
+      {
+        "name": "エクストリームスタジアム",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item06.htm#ux04"
+  },
+  {
+    "id": "source-bx-31-01",
+    "name": "BX-31 ランダムブースターVol.3 / ティラノビート4-70Q",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ティラノビート",
+        "quantity": 1
+      },
+      {
+        "name": "4-70",
+        "quantity": 1
+      },
+      {
+        "name": "Q",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item06.htm#bx31"
+  },
+  {
+    "id": "source-bx-31-02",
+    "name": "BX-31 ランダムブースターVol.3 / ティラノビート3-60S",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ティラノビート",
+        "quantity": 1
+      },
+      {
+        "name": "3-60",
+        "quantity": 1
+      },
+      {
+        "name": "S",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item06.htm#bx31"
+  },
+  {
+    "id": "source-bx-31-03",
+    "name": "BX-31 ランダムブースターVol.3 / ヘルズチェイン9-80O",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ヘルズチェイン",
+        "quantity": 1
+      },
+      {
+        "name": "9-80",
+        "quantity": 1
+      },
+      {
+        "name": "O",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item06.htm#bx31"
+  },
+  {
+    "id": "source-bx-31-04",
+    "name": "BX-31 ランダムブースターVol.3 / ドランダガー4-70P",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ドランダガー",
+        "quantity": 1
+      },
+      {
+        "name": "4-70",
+        "quantity": 1
+      },
+      {
+        "name": "P",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item06.htm#bx31"
+  },
+  {
+    "id": "source-bx-31-05",
+    "name": "BX-31 ランダムブースターVol.3 / シャークエッジ1-60Q",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "シャークエッジ",
+        "quantity": 1
+      },
+      {
+        "name": "1-60",
+        "quantity": 1
+      },
+      {
+        "name": "Q",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item06.htm#bx31"
+  },
+  {
+    "id": "source-bx-31-06",
+    "name": "BX-31 ランダムブースターVol.3 / ライノホーン5-80Q",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ライノホーン",
+        "quantity": 1
+      },
+      {
+        "name": "5-80",
+        "quantity": 1
+      },
+      {
+        "name": "Q",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item06.htm#bx31"
+  },
+  {
+    "id": "source-ux-05-01",
+    "name": "UX-05 ランダムブースター シノビシャドウセレクト / シノビシャドウ1-80MN",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "シノビシャドウ",
+        "quantity": 1
+      },
+      {
+        "name": "1-80",
+        "quantity": 1
+      },
+      {
+        "name": "MN",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item06.htm#ux05"
+  },
+  {
+    "id": "source-ux-05-02",
+    "name": "UX-05 ランダムブースター シノビシャドウセレクト / シノビシャドウ9-60LF",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "シノビシャドウ",
+        "quantity": 1
+      },
+      {
+        "name": "9-60",
+        "quantity": 1
+      },
+      {
+        "name": "LF",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item06.htm#ux05"
+  },
+  {
+    "id": "source-ux-05-03",
+    "name": "UX-05 ランダムブースター シノビシャドウセレクト / シノビシャドウ3-70GP",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "シノビシャドウ",
+        "quantity": 1
+      },
+      {
+        "name": "3-70",
+        "quantity": 1
+      },
+      {
+        "name": "GP",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item06.htm#ux05"
+  },
+  {
+    "id": "source-bx-32",
+    "name": "BX-32 ワイドエクストリームスタジアム",
+    "price": 4400,
+    "parts": [
+      {
+        "name": "ワイドエクストリームスタジアム",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item06.htm#bx32"
+  },
+  {
+    "id": "source-bx-33",
+    "name": "BX-33 ブースター ヴァイスタイガー3-60U",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ヴァイスタイガー",
+        "quantity": 1
+      },
+      {
+        "name": "3-60",
+        "quantity": 1
+      },
+      {
+        "name": "U",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item07.htm#bx33"
+  },
+  {
+    "id": "source-bx-34",
+    "name": "BX-34 スタータ コバルトドラグーン2-60C",
+    "price": 2321,
+    "parts": [
+      {
+        "name": "コバルトドラグーン",
+        "quantity": 1
+      },
+      {
+        "name": "2-60",
+        "quantity": 1
+      },
+      {
+        "name": "C",
+        "quantity": 1
+      },
+      {
+        "name": "ストリングランチャーＬ",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item07.htm#bx34"
+  },
+  {
+    "id": "source-bx-35-01",
+    "name": "BX-35 ランダムブースターVol.4 / ブラックシェル4-60D",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ブラックシェル",
+        "quantity": 1
+      },
+      {
+        "name": "4-60",
+        "quantity": 1
+      },
+      {
+        "name": "D",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item07.htm#bx35"
+  },
+  {
+    "id": "source-bx-35-02",
+    "name": "BX-35 ランダムブースターVol.4 / ブラックシェル9-80B",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ブラックシェル",
+        "quantity": 1
+      },
+      {
+        "name": "9-80",
+        "quantity": 1
+      },
+      {
+        "name": "B",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item07.htm#bx35"
+  },
+  {
+    "id": "source-bx-35-03",
+    "name": "BX-35 ランダムブースターVol.4 / ユニコーンスティング3-70D",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ユニコーンスティング",
+        "quantity": 1
+      },
+      {
+        "name": "3-70",
+        "quantity": 1
+      },
+      {
+        "name": "D",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item07.htm#bx35"
+  },
+  {
+    "id": "source-bx-35-04",
+    "name": "BX-35 ランダムブースターVol.4 / ウィザードロッド1-60R",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ウィザードロッド",
+        "quantity": 1
+      },
+      {
+        "name": "1-60",
+        "quantity": 1
+      },
+      {
+        "name": "R",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item07.htm#bx35"
+  },
+  {
+    "id": "source-bx-35-05",
+    "name": "BX-35 ランダムブースターVol.4 / フェニックスウイング5-80H",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "フェニックスウイング",
+        "quantity": 1
+      },
+      {
+        "name": "5-80",
+        "quantity": 1
+      },
+      {
+        "name": "H",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item07.htm#bx35"
+  },
+  {
+    "id": "source-bx-35-06",
+    "name": "BX-35 ランダムブースターVol.4 / ヴァイパーテイル5-70D",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ヴァイパーテイル",
+        "quantity": 1
+      },
+      {
+        "name": "5-70",
+        "quantity": 1
+      },
+      {
+        "name": "D",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item07.htm#bx35"
+  },
+  {
+    "id": "source-ux-06",
+    "name": "UX-06 ブースター レオンクレスト7-60GN",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "レオンクレスト",
+        "quantity": 1
+      },
+      {
+        "name": "7-60",
+        "quantity": 1
+      },
+      {
+        "name": "GN",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item07.htm#ux06"
+  },
+  {
+    "id": "source-ux-07",
+    "name": "UX-07 フェニックスラダーデッキセット",
+    "price": 4100,
+    "parts": [
+      {
+        "name": "フェニックスラダー",
+        "quantity": 1
+      },
+      {
+        "name": "9-70",
+        "quantity": 1
+      },
+      {
+        "name": "G",
+        "quantity": 1
+      },
+      {
+        "name": "ワイバーンゲイル",
+        "quantity": 1
+      },
+      {
+        "name": "2-60",
+        "quantity": 1
+      },
+      {
+        "name": "S",
+        "quantity": 1
+      },
+      {
+        "name": "スフィンクスカウル",
+        "quantity": 1
+      },
+      {
+        "name": "1-80",
+        "quantity": 1
+      },
+      {
+        "name": "GF",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item07.htm#ux07"
+  },
+  {
+    "id": "source-bx-36-01",
+    "name": "BX-36 ランダムブースター ホエールウェーブセレクト / ホエールウェーブ5-80E",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ホエールウェーブ",
+        "quantity": 1
+      },
+      {
+        "name": "5-80",
+        "quantity": 1
+      },
+      {
+        "name": "E",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item08.htm#bx36"
+  },
+  {
+    "id": "source-bx-36-02",
+    "name": "BX-36 ランダムブースター ホエールウェーブセレクト / ホエールウェーブ4-70HN",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ホエールウェーブ",
+        "quantity": 1
+      },
+      {
+        "name": "4-70",
+        "quantity": 1
+      },
+      {
+        "name": "HN",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item08.htm#bx36"
+  },
+  {
+    "id": "source-bx-36-03",
+    "name": "BX-36 ランダムブースター ホエールウェーブセレクト / ホエールウェーブ3-80GB",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ホエールウェーブ",
+        "quantity": 1
+      },
+      {
+        "name": "3-80",
+        "quantity": 1
+      },
+      {
+        "name": "GB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item08.htm#bx36"
+  },
+  {
+    "id": "source-ux-08",
+    "name": "UX-08 スターター シルバーウルフ3-80FB",
+    "price": 2080,
+    "parts": [
+      {
+        "name": "シルバーウルフ",
+        "quantity": 1
+      },
+      {
+        "name": "3-80",
+        "quantity": 1
+      },
+      {
+        "name": "FB",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item08.htm#ux08"
+  },
+  {
+    "id": "source-bx-37",
+    "name": "BX-37 ダブルエクストリームスタジアムセット",
+    "price": 8200,
+    "parts": [
+      {
+        "name": "ダブルエクストリームスタジアム",
+        "quantity": 1
+      },
+      {
+        "name": "ベアスクラッチ",
+        "quantity": 1
+      },
+      {
+        "name": "5-60",
+        "quantity": 1
+      },
+      {
+        "name": "F",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item08.htm#bx37"
+  },
+  {
+    "id": "source-ux-09",
+    "name": "UX-09 スターター サムライセイバー2-70L",
+    "price": 3300,
+    "parts": [
+      {
+        "name": "サムライセイバー",
+        "quantity": 1
+      },
+      {
+        "name": "2-70",
+        "quantity": 1
+      },
+      {
+        "name": "L",
+        "quantity": 1
+      },
+      {
+        "name": "ホールドランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item09.htm#ux09"
+  },
+  {
+    "id": "source-bx-38",
+    "name": "BX-38 ブースター クリムゾンガルーダ4-70TP",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "クリムゾンガルーダ",
+        "quantity": 1
+      },
+      {
+        "name": "4-70",
+        "quantity": 1
+      },
+      {
+        "name": "TP",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item09.htm#bx38"
+  },
+  {
+    "id": "source-ux-10",
+    "name": "UX-10 カスタマイズセットＵ",
+    "price": 5700,
+    "parts": [
+      {
+        "name": "ナイトメイル",
+        "quantity": 1
+      },
+      {
+        "name": "3-85",
+        "quantity": 1
+      },
+      {
+        "name": "BS",
+        "quantity": 1
+      },
+      {
+        "name": "プテラスイング",
+        "quantity": 1
+      },
+      {
+        "name": "ティラノビート",
+        "quantity": 1
+      },
+      {
+        "name": "ヘルズハンマー",
+        "quantity": 1
+      },
+      {
+        "name": "7-70",
+        "quantity": 1
+      },
+      {
+        "name": "1-60",
+        "quantity": 1
+      },
+      {
+        "name": "ラバー",
+        "quantity": 1
+      },
+      {
+        "name": "ポイント",
+        "quantity": 1
+      },
+      {
+        "name": "ボール",
+        "quantity": 1
+      },
+      {
+        "name": "ラッシュ",
+        "quantity": 1
+      },
+      {
+        "name": "メタルニードル",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item09.htm#ux10"
+  },
+  {
+    "id": "source-ux-11",
+    "name": "UX-11 スターター インパクトドレイク9-60LR",
+    "price": 2420,
+    "parts": [
+      {
+        "name": "インパクトドレイク",
+        "quantity": 1
+      },
+      {
+        "name": "9-60",
+        "quantity": 1
+      },
+      {
+        "name": "LR",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item10.htm#ux11"
+  },
+  {
+    "id": "source-ux-12-01",
+    "name": "UX-12 ランダムブースターVol.5 / ゴーストサークル0-80GB",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ゴーストサークル",
+        "quantity": 1
+      },
+      {
+        "name": "0-80",
+        "quantity": 1
+      },
+      {
+        "name": "GB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item10.htm#ux12"
+  },
+  {
+    "id": "source-ux-12-02",
+    "name": "UX-12 ランダムブースターVol.5 / ゴーストサークル4-60H",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ゴーストサークル",
+        "quantity": 1
+      },
+      {
+        "name": "4-60",
+        "quantity": 1
+      },
+      {
+        "name": "H",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item10.htm#ux12"
+  },
+  {
+    "id": "source-ux-12-03",
+    "name": "UX-12 ランダムブースターVol.5 / シノビシャドウ3-80F",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "シノビシャドウ",
+        "quantity": 1
+      },
+      {
+        "name": "3-80",
+        "quantity": 1
+      },
+      {
+        "name": "F",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item10.htm#ux12"
+  },
+  {
+    "id": "source-ux-12-04",
+    "name": "UX-12 ランダムブースターVol.5 / レオンクロー0-80E",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "レオンクロー",
+        "quantity": 1
+      },
+      {
+        "name": "0-80",
+        "quantity": 1
+      },
+      {
+        "name": "E",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item10.htm#ux12"
+  },
+  {
+    "id": "source-ux-12-05",
+    "name": "UX-12 ランダムブースターVol.5 / フェニックスフェザー2-60N",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "フェニックスフェザー",
+        "quantity": 1
+      },
+      {
+        "name": "2-60",
+        "quantity": 1
+      },
+      {
+        "name": "N",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item10.htm#ux12"
+  },
+  {
+    "id": "source-ux-12-06",
+    "name": "UX-12 ランダムブースターVol.5 / ワイバーンゲイル0-80C",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ワイバーンゲイル",
+        "quantity": 1
+      },
+      {
+        "name": "0-80",
+        "quantity": 1
+      },
+      {
+        "name": "C",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item10.htm#ux12"
+  },
+  {
+    "id": "source-ux-13",
+    "name": "UX-13 ブースター ゴーレムロック1-60UN",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "ゴーレムロック",
+        "quantity": 1
+      },
+      {
+        "name": "1-60",
+        "quantity": 1
+      },
+      {
+        "name": "UN",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item10.htm#ux13"
+  },
+  {
+    "id": "source-bx-39-01",
+    "name": "BX-39 ランダムブースター シェルタードレイクセレクト / シェルタードレイク7-80GP",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "シェルタードレイク",
+        "quantity": 1
+      },
+      {
+        "name": "7-80",
+        "quantity": 1
+      },
+      {
+        "name": "GP",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item10.htm#bx39"
+  },
+  {
+    "id": "source-bx-39-02",
+    "name": "BX-39 ランダムブースター シェルタードレイクセレクト / シェルタードレイク5-70O",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "シェルタードレイク",
+        "quantity": 1
+      },
+      {
+        "name": "5-70",
+        "quantity": 1
+      },
+      {
+        "name": "O",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item10.htm#bx39"
+  },
+  {
+    "id": "source-bx-39-03",
+    "name": "BX-39 ランダムブースター シェルタードレイクセレクト / シェルタードレイク3-60D",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "シェルタードレイク",
+        "quantity": 1
+      },
+      {
+        "name": "3-60",
+        "quantity": 1
+      },
+      {
+        "name": "D",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item10.htm#bx39"
+  },
+  {
+    "id": "source-cx-01",
+    "name": "CX-01 スターター ドランブレイブS6-60V",
+    "price": 2200,
+    "parts": [
+      {
+        "name": "ドランブレイブS",
+        "quantity": 1
+      },
+      {
+        "name": "6-60",
+        "quantity": 1
+      },
+      {
+        "name": "V",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item11.htm#cx01"
+  },
+  {
+    "id": "source-cx-02",
+    "name": "CX-02 スターター ウィザードアークR4-55LO",
+    "price": 2200,
+    "parts": [
+      {
+        "name": "ウィザードアークR",
+        "quantity": 1
+      },
+      {
+        "name": "4-55",
+        "quantity": 1
+      },
+      {
+        "name": "LO",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item11.htm#cx02"
+  },
+  {
+    "id": "source-cx-03",
+    "name": "CX-03 ブースター ペルセウスダークB6-80W",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ペルセウスダークB",
+        "quantity": 1
+      },
+      {
+        "name": "6-80",
+        "quantity": 1
+      },
+      {
+        "name": "W",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item11.htm#cx03"
+  },
+  {
+    "id": "source-cx-04",
+    "name": "CX-04 バトルエントリーセットＣ",
+    "price": 6501,
+    "parts": [
+      {
+        "name": "ドランブレイブS",
+        "quantity": 1
+      },
+      {
+        "name": "6-60",
+        "quantity": 1
+      },
+      {
+        "name": "V",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 2
+      },
+      {
+        "name": "ペルセウスダークB",
+        "quantity": 1
+      },
+      {
+        "name": "6-80",
+        "quantity": 1
+      },
+      {
+        "name": "W",
+        "quantity": 1
+      },
+      {
+        "name": "エクストリームスタジアム",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item11.htm#cx04"
+  },
+  {
+    "id": "source-bx-40",
+    "name": "BX-40 ワインダーランチャーＬ",
+    "price": 880,
+    "parts": [
+      {
+        "name": "ワインダーランチャーＬ",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item11.htm#bx40"
+  },
+  {
+    "id": "source-bx-41",
+    "name": "BX-41 ラバーカスタムグリップ ガンメタVer.",
+    "price": 1320,
+    "parts": [
+      {
+        "name": "ラバーカスタムグリップ",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item11.htm#bx41"
+  },
+  {
+    "id": "source-bx-42",
+    "name": "BX-42 ラバーカスタムグリップ ブルーVer.",
+    "price": 1320,
+    "parts": [
+      {
+        "name": "ラバーカスタムグリップ",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item11.htm#bx42"
+  },
+  {
+    "id": "source-bx-43",
+    "name": "BX-43 ギアケース ホワイトVer.",
+    "price": 4000,
+    "parts": [
+      {
+        "name": "ギヤケース",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item11.htm#bx43"
+  },
+  {
+    "id": "source-cx-05-01",
+    "name": "CX-05 ランダムブースターVol.6 / ヘルズリーパーT4-70K",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ヘルズリーパーT",
+        "quantity": 1
+      },
+      {
+        "name": "4-70",
+        "quantity": 1
+      },
+      {
+        "name": "K",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item12.htm#cx05"
+  },
+  {
+    "id": "source-cx-05-02",
+    "name": "CX-05 ランダムブースターVol.6 / ライノリーパーC4-55D",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ライノリーパーC",
+        "quantity": 1
+      },
+      {
+        "name": "4-55",
+        "quantity": 1
+      },
+      {
+        "name": "D",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item12.htm#cx05"
+  },
+  {
+    "id": "source-cx-05-03",
+    "name": "CX-05 ランダムブースターVol.6 / ヘルズアークT3-85O",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ヘルズアークT",
+        "quantity": 1
+      },
+      {
+        "name": "3-85",
+        "quantity": 1
+      },
+      {
+        "name": "O",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item12.htm#cx05"
+  },
+  {
+    "id": "source-cx-05-04",
+    "name": "CX-05 ランダムブースターVol.6 / レオンクレスト9-80K",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "レオンクレスト",
+        "quantity": 1
+      },
+      {
+        "name": "9-80",
+        "quantity": 1
+      },
+      {
+        "name": "K",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item12.htm#cx05"
+  },
+  {
+    "id": "source-cx-05-05",
+    "name": "CX-05 ランダムブースターVol.6 / フェニックスラダー4-70LF",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "フェニックスラダー",
+        "quantity": 1
+      },
+      {
+        "name": "4-70",
+        "quantity": 1
+      },
+      {
+        "name": "LF",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item12.htm#cx05"
+  },
+  {
+    "id": "source-cx-05-06",
+    "name": "CX-05 ランダムブースターVol.6 / ホエールウェーブ7-60K",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ホエールウェーブ",
+        "quantity": 1
+      },
+      {
+        "name": "7-60",
+        "quantity": 1
+      },
+      {
+        "name": "K",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item12.htm#cx05"
+  },
+  {
+    "id": "source-ux-14",
+    "name": "UX-14 スターター スコーピオスピア0-70Z",
+    "price": 2200,
+    "parts": [
+      {
+        "name": "スコーピオスピア",
+        "quantity": 1
+      },
+      {
+        "name": "0-70",
+        "quantity": 1
+      },
+      {
+        "name": "Z",
+        "quantity": 1
+      },
+      {
+        "name": "ロングワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item12.htm#ux14"
+  },
+  {
+    "id": "source-cx-06-01",
+    "name": "CX-06 ランダムブースター フォックスブラッシュセレクト / フォックスブラッシュJ9-70GR",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "フォックスブラッシュJ",
+        "quantity": 1
+      },
+      {
+        "name": "9-70",
+        "quantity": 1
+      },
+      {
+        "name": "GR",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item12.htm#cx06"
+  },
+  {
+    "id": "source-cx-06-02",
+    "name": "CX-06 ランダムブースター フォックスブラッシュセレクト / フォックスブラッシュJ0-80DB",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "フォックスブラッシュJ",
+        "quantity": 1
+      },
+      {
+        "name": "0-80",
+        "quantity": 1
+      },
+      {
+        "name": "DB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item12.htm#cx06"
+  },
+  {
+    "id": "source-cx-06-03",
+    "name": "CX-06 ランダムブースター フォックスブラッシュセレクト / フォックスブラッシュJ2-60U",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "フォックスブラッシュJ",
+        "quantity": 1
+      },
+      {
+        "name": "2-60",
+        "quantity": 1
+      },
+      {
+        "name": "U",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item12.htm#cx06"
+  },
+  {
+    "id": "source-bx-44",
+    "name": "BX-44 ブースター トリケラプレスM-85BS",
+    "price": 1500,
+    "parts": [
+      {
+        "name": "トリケラプレス",
+        "quantity": 1
+      },
+      {
+        "name": "M-85",
+        "quantity": 1
+      },
+      {
+        "name": "BS",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item12.htm#bx44"
+  },
+  {
+    "id": "source-cx-07",
+    "name": "CX-07 スターター ペガサスブラストATr",
+    "price": 2600,
+    "parts": [
+      {
+        "name": "ペガサスブラストATr",
+        "quantity": 1
+      },
+      {
+        "name": "ロングワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item13.htm#cx07"
+  },
+  {
+    "id": "source-cx-08-01",
+    "name": "CX-08 ランダムブースターVol.7 / ケルベロスフレイムW5-80WB",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ケルベロスフレイムW",
+        "quantity": 1
+      },
+      {
+        "name": "5-80",
+        "quantity": 1
+      },
+      {
+        "name": "WB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item13.htm#cx08"
+  },
+  {
+    "id": "source-cx-08-02",
+    "name": "CX-08 ランダムブースターVol.7 / ホエールフレイムM3-85HT",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ホエールフレイムM",
+        "quantity": 1
+      },
+      {
+        "name": "3-85",
+        "quantity": 1
+      },
+      {
+        "name": "HT",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item13.htm#cx08"
+  },
+  {
+    "id": "source-cx-08-03",
+    "name": "CX-08 ランダムブースターVol.7 / ケルベロスダークW1-60F",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ケルベロスダークW",
+        "quantity": 1
+      },
+      {
+        "name": "1-60",
+        "quantity": 1
+      },
+      {
+        "name": "F",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item13.htm#cx08"
+  },
+  {
+    "id": "source-cx-08-04",
+    "name": "CX-08 ランダムブースターVol.7 / ドランバスター5-80MN",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ドランバスター",
+        "quantity": 1
+      },
+      {
+        "name": "5-80",
+        "quantity": 1
+      },
+      {
+        "name": "MN",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item13.htm#cx08"
+  },
+  {
+    "id": "source-cx-08-05",
+    "name": "CX-08 ランダムブースターVol.7 / ブラックシェル7-70WB",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ブラックシェル",
+        "quantity": 1
+      },
+      {
+        "name": "7-70",
+        "quantity": 1
+      },
+      {
+        "name": "WB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item13.htm#cx08"
+  },
+  {
+    "id": "source-cx-08-06",
+    "name": "CX-08 ランダムブースターVol.7 / コバルトドラグーン4-55WB",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "コバルトドラグーン",
+        "quantity": 1
+      },
+      {
+        "name": "4-55",
+        "quantity": 1
+      },
+      {
+        "name": "WB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item13.htm#cx08"
+  },
+  {
+    "id": "source-bx-45",
+    "name": "BX-45 ブースター サムライカリバー6-70M",
+    "price": 1500,
+    "parts": [
+      {
+        "name": "サムライカリバー",
+        "quantity": 1
+      },
+      {
+        "name": "6-70",
+        "quantity": 1
+      },
+      {
+        "name": "M",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item13.htm#bx45"
+  },
+  {
+    "id": "source-ux-15",
+    "name": "UX-15 シャークスケイルデッキセット",
+    "price": 4200,
+    "parts": [
+      {
+        "name": "シャークスケイル",
+        "quantity": 1
+      },
+      {
+        "name": "4-50",
+        "quantity": 1
+      },
+      {
+        "name": "UF",
+        "quantity": 1
+      },
+      {
+        "name": "ティラノロア",
+        "quantity": 1
+      },
+      {
+        "name": "1-70",
+        "quantity": 1
+      },
+      {
+        "name": "L",
+        "quantity": 1
+      },
+      {
+        "name": "ヘルズブレイブJ",
+        "quantity": 1
+      },
+      {
+        "name": "3-60",
+        "quantity": 1
+      },
+      {
+        "name": "GF",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "https://kyoganken.web.fc2.com/beyx/item13.htm#ux15"
+  },
+  {
+    "id": "source-cx-09",
+    "name": "CX-09 スターター ソルエクリプスD5-70TK",
+    "price": 2500,
+    "parts": [
+      {
+        "name": "ソルエクリプスD",
+        "quantity": 1
+      },
+      {
+        "name": "5-70",
+        "quantity": 1
+      },
+      {
+        "name": "TK",
+        "quantity": 1
+      },
+      {
+        "name": "ロングワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item14.htm#cx09"
+  },
+  {
+    "id": "source-ux-16-01",
+    "name": "UX-16 ランダムブースター クロックミラージュセレクト / クロックミラージュ9-65B（緑）",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "クロックミラージュ",
+        "quantity": 1
+      },
+      {
+        "name": "9-65",
+        "quantity": 1
+      },
+      {
+        "name": "B",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item14.htm#ux16"
+  },
+  {
+    "id": "source-ux-16-02",
+    "name": "UX-16 ランダムブースター クロックミラージュセレクト / クロックミラージュ9-65B（黒）",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "クロックミラージュ",
+        "quantity": 1
+      },
+      {
+        "name": "9-65",
+        "quantity": 1
+      },
+      {
+        "name": "B",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item14.htm#ux16"
+  },
+  {
+    "id": "source-ux-16-03",
+    "name": "UX-16 ランダムブースター クロックミラージュセレクト / クロックミラージュ9-65B（赤紫）",
+    "price": 1400,
+    "parts": [
+      {
+        "name": "クロックミラージュ",
+        "quantity": 1
+      },
+      {
+        "name": "9-65",
+        "quantity": 1
+      },
+      {
+        "name": "B",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item14.htm#ux16"
+  },
+  {
+    "id": "source-bx-46",
+    "name": "BX-46 バトルエントリーセット∞",
+    "price": 7500,
+    "parts": [
+      {
+        "name": "コバルトドレイク",
+        "quantity": 1
+      },
+      {
+        "name": "9-60",
+        "quantity": 1
+      },
+      {
+        "name": "R",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 2
+      },
+      {
+        "name": "ゴートタックル",
+        "quantity": 1
+      },
+      {
+        "name": "7-70",
+        "quantity": 1
+      },
+      {
+        "name": "T",
+        "quantity": 1
+      },
+      {
+        "name": "インフィニティスタジアム",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item14.htm#bx46"
+  },
+  {
+    "id": "source-bx-47",
+    "name": "BX-47 ストリングランチャーＬ レッドver.",
+    "price": 990,
+    "parts": [
+      {
+        "name": "ストリングランチャーＬ",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item14.htm#bx47"
+  },
+  {
+    "id": "source-cx-10",
+    "name": "CX-10 ブースター ウルフハントF0-60DB",
+    "price": 1700,
+    "parts": [
+      {
+        "name": "ウルフハントF",
+        "quantity": 1
+      },
+      {
+        "name": "0-60",
+        "quantity": 1
+      },
+      {
+        "name": "DB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item15.htm#cx10"
+  },
+  {
+    "id": "source-cx-11",
+    "name": "CX-11 エンペラーマイトデッキセット",
+    "price": 5000,
+    "parts": [
+      {
+        "name": "エンペラーマイトHOp",
+        "quantity": 1
+      },
+      {
+        "name": "ゴーレムロック",
+        "quantity": 1
+      },
+      {
+        "name": "M-85",
+        "quantity": 1
+      },
+      {
+        "name": "HN",
+        "quantity": 1
+      },
+      {
+        "name": "シャークギル",
+        "quantity": 1
+      },
+      {
+        "name": "5-60",
+        "quantity": 1
+      },
+      {
+        "name": "FB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item15.htm#cx11"
+  },
+  {
+    "id": "source-ux-17",
+    "name": "UX-17 スターター メテオドラグーン3-70J",
+    "price": 2300,
+    "parts": [
+      {
+        "name": "メテオドラグーン",
+        "quantity": 1
+      },
+      {
+        "name": "3-70",
+        "quantity": 1
+      },
+      {
+        "name": "J",
+        "quantity": 1
+      },
+      {
+        "name": "ドラゴンワインダーランチャーＬ",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item16.htm#ux17"
+  },
+  {
+    "id": "source-ux-18-01",
+    "name": "UX-18 ランダムブースター Vol.8 / マミーカース7-55W",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "マミーカース",
+        "quantity": 1
+      },
+      {
+        "name": "7-55",
+        "quantity": 1
+      },
+      {
+        "name": "W",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item16.htm#ux18"
+  },
+  {
+    "id": "source-ux-18-02",
+    "name": "UX-18 ランダムブースター Vol.8 / マミーカース4-60C",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "マミーカース",
+        "quantity": 1
+      },
+      {
+        "name": "4-60",
+        "quantity": 1
+      },
+      {
+        "name": "C",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item16.htm#ux18"
+  },
+  {
+    "id": "source-ux-18-03",
+    "name": "UX-18 ランダムブースター Vol.8 / ペガサスブラッシュM3-85W",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ペガサスブラッシュM",
+        "quantity": 1
+      },
+      {
+        "name": "3-85",
+        "quantity": 1
+      },
+      {
+        "name": "W",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item16.htm#ux18"
+  },
+  {
+    "id": "source-ux-18-04",
+    "name": "UX-18 ランダムブースター Vol.8 / ソルブレイブC9-70TP",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ソルブレイブC",
+        "quantity": 1
+      },
+      {
+        "name": "9-70",
+        "quantity": 1
+      },
+      {
+        "name": "TP",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item16.htm#ux18"
+  },
+  {
+    "id": "source-ux-18-05",
+    "name": "UX-18 ランダムブースター Vol.8 / ドランダガー7-55G",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ドランダガー",
+        "quantity": 1
+      },
+      {
+        "name": "7-55",
+        "quantity": 1
+      },
+      {
+        "name": "G",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item16.htm#ux18"
+  },
+  {
+    "id": "source-ux-18-06",
+    "name": "UX-18 ランダムブースター Vol.8 / ヴァイスタイガー4-80LR",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ヴァイスタイガー",
+        "quantity": 1
+      },
+      {
+        "name": "4-80",
+        "quantity": 1
+      },
+      {
+        "name": "LR",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item16.htm#ux18"
+  },
+  {
+    "id": "source-cx-12",
+    "name": "CX-12 ブースター フェニックスフレアZ9-80WW",
+    "price": 1700,
+    "parts": [
+      {
+        "name": "フェニックスフレアZ",
+        "quantity": 1
+      },
+      {
+        "name": "9-80",
+        "quantity": 1
+      },
+      {
+        "name": "WW",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item16.htm#cx12"
+  },
+  {
+    "id": "source-bx-48-01",
+    "name": "BX-48 ランダムブースターVol.9 / コバルトドラグーン9-80F",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "コバルトドラグーン",
+        "quantity": 1
+      },
+      {
+        "name": "9-80",
+        "quantity": 1
+      },
+      {
+        "name": "F",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item16.htm#bx48"
+  },
+  {
+    "id": "source-bx-48-02",
+    "name": "BX-48 ランダムブースターVol.9 / シャークエッジ4-70E",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "シャークエッジ",
+        "quantity": 1
+      },
+      {
+        "name": "4-70",
+        "quantity": 1
+      },
+      {
+        "name": "E",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item16.htm#bx48"
+  },
+  {
+    "id": "source-bx-48-03",
+    "name": "BX-48 ランダムブースターVol.9 / マンモスタスク7-60S",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "マンモスタスク",
+        "quantity": 1
+      },
+      {
+        "name": "7-60",
+        "quantity": 1
+      },
+      {
+        "name": "S",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item16.htm#bx48"
+  },
+  {
+    "id": "source-bx-48-04",
+    "name": "BX-48 ランダムブースターVol.9 / ヘルズサイズ3-85GB",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ヘルズサイズ",
+        "quantity": 1
+      },
+      {
+        "name": "3-85",
+        "quantity": 1
+      },
+      {
+        "name": "GB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item16.htm#bx48"
+  },
+  {
+    "id": "source-bx-48-05",
+    "name": "BX-48 ランダムブースターVol.9 / ドランバスター2-80Q",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ドランバスター",
+        "quantity": 1
+      },
+      {
+        "name": "2-80",
+        "quantity": 1
+      },
+      {
+        "name": "Q",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item16.htm#bx48"
+  },
+  {
+    "id": "source-cx-13",
+    "name": "CX-13 スターター バハムートブリッツBK1-50I",
+    "price": 2200,
+    "parts": [
+      {
+        "name": "バハムートブリッツBK",
+        "quantity": 1
+      },
+      {
+        "name": "1-50",
+        "quantity": 1
+      },
+      {
+        "name": "I",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item17.htm#cx13"
+  },
+  {
+    "id": "source-cx-14",
+    "name": "CX-14 スターター ナイトフォートレスGV8-70UN",
+    "price": 2200,
+    "parts": [
+      {
+        "name": "ナイトフォートレスGV",
+        "quantity": 1
+      },
+      {
+        "name": "8-70",
+        "quantity": 1
+      },
+      {
+        "name": "UN",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item17.htm#cx13"
+  },
+  {
+    "id": "source-cx-15",
+    "name": "CX-15 ブースター ラグナレイジFE4-55Y",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ラグナレイジFE",
+        "quantity": 1
+      },
+      {
+        "name": "4-55",
+        "quantity": 1
+      },
+      {
+        "name": "Y",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item17.htm#cx13"
+  },
+  {
+    "id": "source-cx-16",
+    "name": "CX-16 スタートダッシュセットＣ",
+    "price": 5650,
+    "parts": [
+      {
+        "name": "バハムートブリッツBK",
+        "quantity": 1
+      },
+      {
+        "name": "1-50",
+        "quantity": 1
+      },
+      {
+        "name": "I",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      },
+      {
+        "name": "ランチャーグリップ",
+        "quantity": 1
+      },
+      {
+        "name": "エクストリームスタジアム",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item17.htm#cx13"
+  },
+  {
+    "id": "source-ux-19",
+    "name": "UX-19 スターター バレットグリフォンH",
+    "price": 2600,
+    "parts": [
+      {
+        "name": "バレットグリフォンH",
+        "quantity": 1
+      },
+      {
+        "name": "ロングワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item18.htm#ux19"
+  },
+  {
+    "id": "source-cx-17-01",
+    "name": "CX-17 ランダムブースターVol.10 / ユニコーンデルタPO3-60GU",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ユニコーンデルタPO",
+        "quantity": 1
+      },
+      {
+        "name": "3-60",
+        "quantity": 1
+      },
+      {
+        "name": "GU",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item18.htm#cx17"
+  },
+  {
+    "id": "source-cx-17-02",
+    "name": "CX-17 ランダムブースターVol.10 / ユニコーンデルタPO1-80GR",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ユニコーンデルタPO",
+        "quantity": 1
+      },
+      {
+        "name": "1-80",
+        "quantity": 1
+      },
+      {
+        "name": "GR",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item18.htm#cx17"
+  },
+  {
+    "id": "source-cx-17-03",
+    "name": "CX-17 ランダムブースターVol.10 / サムライセイバー9-65LO",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "サムライセイバー",
+        "quantity": 1
+      },
+      {
+        "name": "9-65",
+        "quantity": 1
+      },
+      {
+        "name": "LO",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item18.htm#cx17"
+  },
+  {
+    "id": "source-cx-17-04",
+    "name": "CX-17 ランダムブースターVol.10 / ヘルズハンマー3-85GU",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ヘルズハンマー",
+        "quantity": 1
+      },
+      {
+        "name": "3-85",
+        "quantity": 1
+      },
+      {
+        "name": "GU",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item18.htm#cx17"
+  },
+  {
+    "id": "source-cx-17-05",
+    "name": "CX-17 ランダムブースターVol.10 / ティラノビート3-60N",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ティラノビート",
+        "quantity": 1
+      },
+      {
+        "name": "3-60",
+        "quantity": 1
+      },
+      {
+        "name": "N",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item18.htm#cx17"
+  },
+  {
+    "id": "source-cx-17-06",
+    "name": "CX-17 ランダムブースターVol.10 / クリムゾンガルーダ7-80GU",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "クリムゾンガルーダ",
+        "quantity": 1
+      },
+      {
+        "name": "7-80",
+        "quantity": 1
+      },
+      {
+        "name": "GU",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item18.htm#cx17"
+  },
+  {
+    "id": "source-bx-49",
+    "name": "BX-49 スターター ドランストライク4-50FF",
+    "price": 2200,
+    "parts": [
+      {
+        "name": "ドランストライク",
+        "quantity": 1
+      },
+      {
+        "name": "4-50",
+        "quantity": 1
+      },
+      {
+        "name": "FF",
+        "quantity": 1
+      },
+      {
+        "name": "ワインダーランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item18.htm#bx49"
+  },
+  {
+    "id": "source-cx-18-01",
+    "name": "CX-18 ランダムブースター ブラキオウィップセレクト / ブラキオウィップOW5-70Nr（紫）",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ブラキオウィップOW",
+        "quantity": 1
+      },
+      {
+        "name": "5-70",
+        "quantity": 1
+      },
+      {
+        "name": "Nr",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item18.htm#cx18"
+  },
+  {
+    "id": "source-cx-18-02",
+    "name": "CX-18 ランダムブースター ブラキオウィップセレクト / ブラキオウィップOW5-70Nr（金）",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ブラキオウィップOW",
+        "quantity": 1
+      },
+      {
+        "name": "5-70",
+        "quantity": 1
+      },
+      {
+        "name": "Nr",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item18.htm#cx18"
+  },
+  {
+    "id": "source-cx-18-03",
+    "name": "CX-18 ランダムブースター ブラキオウィップセレクト / ブラキオウィップOW5-70Nr（黒）",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ブラキオウィップOW",
+        "quantity": 1
+      },
+      {
+        "name": "5-70",
+        "quantity": 1
+      },
+      {
+        "name": "Nr",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item18.htm#cx18"
+  },
+  {
+    "id": "source-bx-51",
+    "name": "BX-51 ストリングランチャー ブラック×グリーン",
+    "price": 1100,
+    "parts": [
+      {
+        "name": "ストリングランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item18.htm#bx51"
+  },
+  {
+    "id": "source-ux-20",
+    "name": "UX-20 スターター グローリーワルキューレLF",
+    "price": 2700,
+    "parts": [
+      {
+        "name": "グローリーワルキューレLF",
+        "quantity": 1
+      },
+      {
+        "name": "ストリングランチャー",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item19.htm#ux20"
+  },
+  {
+    "id": "source-bx-50-01",
+    "name": "BX-50 ランダムブースターVol.11 / ヘブンズリング0-80DS",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ヘブンズリング",
+        "quantity": 1
+      },
+      {
+        "name": "0-80",
+        "quantity": 1
+      },
+      {
+        "name": "DS",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item19.htm#bx50"
+  },
+  {
+    "id": "source-bx-50-02",
+    "name": "BX-50 ランダムブースターVol.11 / ヘブンズリング6-60TP",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ヘブンズリング",
+        "quantity": 1
+      },
+      {
+        "name": "6-60",
+        "quantity": 1
+      },
+      {
+        "name": "TP",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item19.htm#bx50"
+  },
+  {
+    "id": "source-bx-50-03",
+    "name": "BX-50 ランダムブースターVol.11 / インパクトドレイク7-55FB",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "インパクトドレイク",
+        "quantity": 1
+      },
+      {
+        "name": "7-55",
+        "quantity": 1
+      },
+      {
+        "name": "FB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item19.htm#bx50"
+  },
+  {
+    "id": "source-bx-50-04",
+    "name": "BX-50 ランダムブースターVol.11 / ゴーストサークルM-85DS",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ゴーストサークル",
+        "quantity": 1
+      },
+      {
+        "name": "M-85",
+        "quantity": 1
+      },
+      {
+        "name": "DS",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item19.htm#bx50"
+  },
+  {
+    "id": "source-bx-50-05",
+    "name": "BX-50 ランダムブースターVol.11 / ウルフフレイムD9-65L",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ウルフフレイムD",
+        "quantity": 1
+      },
+      {
+        "name": "9-65",
+        "quantity": 1
+      },
+      {
+        "name": "L",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item19.htm#bx50"
+  },
+  {
+    "id": "source-bx-50-06",
+    "name": "BX-50 ランダムブースターVol.11 / ケルベロスリーパーB0-8WB",
+    "price": 1600,
+    "parts": [
+      {
+        "name": "ケルベロスリーパーB0-8WB",
+        "quantity": 1
+      }
+    ],
+    "isRandom": true,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item19.htm#bx50"
+  },
+  {
+    "id": "source-ux-21",
+    "name": "UX-21 ヘルズネザーデッキセット",
+    "price": 4500,
+    "parts": [
+      {
+        "name": "ヘルズネザーＺ",
+        "quantity": 1
+      },
+      {
+        "name": "シルバーウルフ",
+        "quantity": 1
+      },
+      {
+        "name": "9-70",
+        "quantity": 1
+      },
+      {
+        "name": "R",
+        "quantity": 1
+      },
+      {
+        "name": "ワイバーンホバー",
+        "quantity": 1
+      },
+      {
+        "name": "8-80",
+        "quantity": 1
+      },
+      {
+        "name": "B",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item19.htm#ux21"
+  },
+  {
+    "id": "source-bx-57",
+    "name": "BX-57 3on3デッキケース ブラックVer.",
+    "price": 1100,
+    "parts": [
+      {
+        "name": "3on3デッキケース",
+        "quantity": 1
+      }
+    ],
+    "isRandom": false,
+    "source": "https://kyoganken.sakura.ne.jp/beyx/index.htm",
+    "detailUrl": "item19.htm#bx57"
+  }
+]
