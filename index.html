@@ -1,0 +1,1781 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>パーツ価格・購入比較ツール</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f6f8;
+      --panel: #ffffff;
+      --line: #d8dee6;
+      --text: #1f2937;
+      --muted: #667085;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --good: #137a45;
+      --good-soft: #ecfdf3;
+      --warn: #a15c00;
+      --warn-soft: #fff7e6;
+      --bad: #b42318;
+      --bad-soft: #fff1f0;
+      --shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+      font-family:
+        "Meiryo",
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        system-ui,
+        sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .app {
+      width: min(1180px, calc(100% - 24px));
+      margin: 24px auto 48px;
+    }
+
+    .page-header {
+      margin-bottom: 18px;
+    }
+
+    .page-header h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 34px);
+    }
+
+    .page-header p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .panel.full {
+      grid-column: 1 / -1;
+    }
+
+    .panel h2 {
+      margin: 0 0 14px;
+      font-size: 20px;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: minmax(0, 1.4fr) minmax(140px, 0.6fr);
+    }
+
+    .field {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .field label {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .field small,
+    .muted {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      padding: 10px 11px;
+      background: #fff;
+      color: var(--text);
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+    textarea {
+      min-height: 104px;
+      resize: vertical;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .button {
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      padding: 9px 13px;
+      background: #fff;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .button.primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .button.danger {
+      color: var(--bad);
+    }
+
+    .message {
+      min-height: 24px;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .message.error {
+      color: var(--bad);
+    }
+
+    .message.success {
+      color: var(--good);
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .summary-card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px;
+      background: #fafbfc;
+    }
+
+    .summary-card .label {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .summary-card .value {
+      margin-top: 3px;
+      font-size: 21px;
+      font-weight: 800;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+      background: #fff;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px 11px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f8fafc;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .price {
+      white-space: nowrap;
+      font-weight: 800;
+    }
+
+    .part-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      background: #eef2f6;
+      padding: 3px 8px;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .chip.hit {
+      background: var(--accent-soft);
+      color: #1d4ed8;
+      font-weight: 800;
+    }
+
+    .status {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .status.good {
+      background: var(--good-soft);
+      color: var(--good);
+    }
+
+    .status.bad {
+      background: var(--bad-soft);
+      color: var(--bad);
+    }
+
+    .result-box {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px;
+      margin-top: 12px;
+      background: #fff;
+    }
+
+    .result-box.good {
+      border-color: #abd9bf;
+      background: var(--good-soft);
+    }
+
+    .result-box h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .result-box p {
+      margin: 6px 0;
+      line-height: 1.6;
+    }
+
+    .result-box ul {
+      margin: 8px 0 0;
+      padding-left: 22px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .danger-text {
+      color: var(--bad);
+      font-weight: 800;
+    }
+
+    .footer-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 820px) {
+      .grid,
+      .form-row,
+      .summary {
+        grid-template-columns: 1fr;
+      }
+
+      .panel.full {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="page-header">
+      <h1>パーツ価格・購入比較ツール</h1>
+      <p>
+        商品名・価格・含まれるパーツを登録し、欲しいパーツと必要個数から最安候補を検索します。
+        同じパーツが複数入る商品は「A×2」のように入力できます。
+      </p>
+    </header>
+
+    <div class="grid">
+      <section class="panel">
+        <h2>商品登録</h2>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="product-name">商品名</label>
+            <input id="product-name" type="text" placeholder="例：商品A">
+          </div>
+
+          <div class="field">
+            <label for="product-price">価格（円）</label>
+            <input id="product-price" type="number" min="0" step="1" placeholder="1000">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="product-parts">含まれるパーツ</label>
+          <textarea
+            id="product-parts"
+            placeholder="例：&#10;A×2&#10;B&#10;C×3"
+          ></textarea>
+          <small>
+            改行・カンマ・読点で区切れます。A×2 / A*2 / A x2 に対応します。
+            同じ名前を複数回書いた場合も個数を合算します。
+          </small>
+        </div>
+
+        <div class="button-row">
+          <button id="save-product-button" class="button primary" type="button">商品を追加</button>
+          <button id="cancel-edit-button" class="button hidden" type="button">編集をやめる</button>
+        </div>
+
+        <div id="form-message" class="message" aria-live="polite"></div>
+      </section>
+
+      <section class="panel">
+        <h2>欲しいパーツを検索</h2>
+
+        <div class="field">
+          <label for="wanted-parts">欲しいパーツ・必要個数</label>
+          <input
+            id="wanted-parts"
+            type="text"
+            list="part-suggestions"
+            placeholder="例：A×2, B"
+          >
+          <datalist id="part-suggestions"></datalist>
+          <small>
+            必要個数も指定できます。例：A×2, B。商品は何個でも買える前提で最安組み合わせを計算します。
+          </small>
+        </div>
+
+        <div class="button-row">
+          <button id="search-button" class="button primary" type="button">検索する</button>
+          <button id="clear-search-button" class="button" type="button">検索をクリア</button>
+        </div>
+
+        <div id="search-result"></div>
+      </section>
+
+      <section class="panel full">
+        <h2>登録商品</h2>
+
+        <div class="summary">
+          <div class="summary-card">
+            <div class="label">商品数</div>
+            <div id="product-count" class="value">0</div>
+          </div>
+
+          <div class="summary-card">
+            <div class="label">パーツ種類</div>
+            <div id="part-count" class="value">0</div>
+          </div>
+
+          <div class="summary-card">
+            <div class="label">割高判定</div>
+            <div id="dominated-count" class="value">0</div>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>商品名</th>
+                <th>価格</th>
+                <th>含まれるパーツ</th>
+                <th>判定</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="product-table-body"></tbody>
+          </table>
+        </div>
+
+        <div class="button-row" style="margin-top: 12px;">
+          <button id="export-button" class="button" type="button">JSONを書き出す</button>
+          <button id="import-button" class="button" type="button">JSONを読み込む</button>
+          <button id="reset-button" class="button danger" type="button">全データ削除</button>
+          <input id="import-file" class="hidden" type="file" accept="application/json,.json">
+        </div>
+      </section>
+
+      <section class="panel full">
+        <h2>パーツ単価の参考推定</h2>
+        <p class="muted">
+          商品価格 ≒ 含まれる各パーツの「単価 × 個数」として、0円以上の範囲で誤差が小さくなるよう推定します。
+          例えば A×2 = 1,000円だけなら、Aの参考単価は500円です。
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>パーツ</th>
+                <th>参考推定単価</th>
+                <th>そのパーツだけの商品</th>
+                <th>最安で含む商品</th>
+              </tr>
+            </thead>
+            <tbody id="part-price-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <p class="footer-note">
+      データはこのブラウザの localStorage に保存されます。旧版データも自動で読み替えます。
+    </p>
+  </main>
+
+  <script>
+    "use strict";
+
+    // =========================================================
+    // 定数
+    // =========================================================
+    const STORAGE_KEY = "parts-price-tool-products";
+    const MAX_SEARCH_STATES = 100000;
+    const PRICE_FORMATTER = new Intl.NumberFormat("ja-JP");
+
+    // =========================================================
+    // DOM参照
+    // =========================================================
+    const productNameInput = document.getElementById("product-name");
+    const productPriceInput = document.getElementById("product-price");
+    const productPartsInput = document.getElementById("product-parts");
+    const saveProductButton = document.getElementById("save-product-button");
+    const cancelEditButton = document.getElementById("cancel-edit-button");
+    const formMessage = document.getElementById("form-message");
+
+    const wantedPartsInput = document.getElementById("wanted-parts");
+    const searchButton = document.getElementById("search-button");
+    const clearSearchButton = document.getElementById("clear-search-button");
+    const searchResult = document.getElementById("search-result");
+    const partSuggestions = document.getElementById("part-suggestions");
+
+    const productCount = document.getElementById("product-count");
+    const partCount = document.getElementById("part-count");
+    const dominatedCount = document.getElementById("dominated-count");
+    const productTableBody = document.getElementById("product-table-body");
+    const partPriceTableBody = document.getElementById("part-price-table-body");
+
+    const exportButton = document.getElementById("export-button");
+    const importButton = document.getElementById("import-button");
+    const importFile = document.getElementById("import-file");
+    const resetButton = document.getElementById("reset-button");
+
+    // =========================================================
+    // 状態
+    // =========================================================
+    let products = loadProducts();
+    let editingProductId = "";
+
+    // =========================================================
+    // 文字列・表示用
+    // =========================================================
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function formatPrice(value) {
+      return `${PRICE_FORMATTER.format(Math.round(value))}円`;
+    }
+
+    function createId() {
+      const randomPart = Math.random().toString(36).slice(2, 10);
+      const timePart = Date.now().toString(36);
+      return `${timePart}-${randomPart}`;
+    }
+
+    function formatPart(part) {
+      const hasMultiple = part.quantity > 1;
+      return hasMultiple ? `${part.name}×${part.quantity}` : part.name;
+    }
+
+    function formatParts(parts) {
+      return parts.map(formatPart).join(", ");
+    }
+
+    // =========================================================
+    // パーツ文字列の解析
+    // =========================================================
+    function parsePartEntries(value) {
+      const rawEntries = String(value)
+        .split(/[\n,、，]+/)
+        .map((entry) => entry.trim())
+        .filter((entry) => !!entry);
+
+      const quantityMap = new Map();
+
+      for (const rawEntry of rawEntries) {
+        const match = rawEntry.match(/^(.*?)(?:\s*[×xX*]\s*(\d+))?$/);
+
+        if (!match) {
+          continue;
+        }
+
+        const name = match[1].trim();
+        const quantityText = match[2] || "1";
+        const quantity = Number.parseInt(quantityText, 10);
+        const hasValidName = !!name;
+        const hasValidQuantity = Number.isInteger(quantity) && quantity > 0;
+
+        if (!hasValidName || !hasValidQuantity) {
+          continue;
+        }
+
+        const currentQuantity = quantityMap.get(name) || 0;
+        quantityMap.set(name, currentQuantity + quantity);
+      }
+
+      return [...quantityMap.entries()].map(([name, quantity]) => ({
+        name,
+        quantity,
+      }));
+    }
+
+    function normalizeStoredParts(parts) {
+      if (!Array.isArray(parts)) {
+        return [];
+      }
+
+      const quantityMap = new Map();
+
+      for (const part of parts) {
+        if (typeof part === "string") {
+          const parsedParts = parsePartEntries(part);
+
+          for (const parsedPart of parsedParts) {
+            const currentQuantity = quantityMap.get(parsedPart.name) || 0;
+            quantityMap.set(parsedPart.name, currentQuantity + parsedPart.quantity);
+          }
+
+          continue;
+        }
+
+        const name = String(part?.name || "").trim();
+        const quantity = Number(part?.quantity);
+        const hasValidName = !!name;
+        const hasValidQuantity = Number.isInteger(quantity) && quantity > 0;
+
+        if (!hasValidName || !hasValidQuantity) {
+          continue;
+        }
+
+        const currentQuantity = quantityMap.get(name) || 0;
+        quantityMap.set(name, currentQuantity + quantity);
+      }
+
+      return [...quantityMap.entries()].map(([name, quantity]) => ({
+        name,
+        quantity,
+      }));
+    }
+
+    function toQuantityMap(parts) {
+      return new Map(parts.map((part) => [part.name, part.quantity]));
+    }
+
+    function getQuantity(parts, partName) {
+      const part = parts.find((item) => item.name === partName);
+      return part?.quantity || 0;
+    }
+
+    function hasRequiredQuantities(candidateParts, requiredParts) {
+      const candidateMap = toQuantityMap(candidateParts);
+
+      return requiredParts.every((requiredPart) => {
+        const candidateQuantity = candidateMap.get(requiredPart.name) || 0;
+        return candidateQuantity >= requiredPart.quantity;
+      });
+    }
+
+    function hasStrictlyMoreContents(candidateParts, targetParts) {
+      const targetMap = toQuantityMap(targetParts);
+
+      return candidateParts.some((candidatePart) => {
+        const targetQuantity = targetMap.get(candidatePart.name) || 0;
+        return candidatePart.quantity > targetQuantity;
+      });
+    }
+
+    function getAllPartNames() {
+      const names = new Set();
+
+      for (const product of products) {
+        for (const part of product.parts) {
+          names.add(part.name);
+        }
+      }
+
+      return [...names].sort((left, right) => left.localeCompare(right, "ja"));
+    }
+
+    // =========================================================
+    // localStorage
+    // =========================================================
+    function loadProducts() {
+      try {
+        const rawValue = localStorage.getItem(STORAGE_KEY);
+
+        if (!rawValue) {
+          return [];
+        }
+
+        const parsedValue = JSON.parse(rawValue);
+
+        if (!Array.isArray(parsedValue)) {
+          return [];
+        }
+
+        return parsedValue
+          .map((product) => {
+            const name = String(product?.name || "").trim();
+            const price = Number(product?.price);
+            const parts = normalizeStoredParts(product?.parts);
+
+            const hasName = !!name;
+            const hasValidPrice = Number.isFinite(price) && price >= 0;
+            const hasParts = !!parts.length;
+
+            if (!hasName || !hasValidPrice || !hasParts) {
+              return null;
+            }
+
+            return {
+              id: String(product?.id || createId()),
+              name,
+              price,
+              parts,
+            };
+          })
+          .filter((product) => !!product);
+      } catch (error) {
+        console.error("保存データの読み込みに失敗しました。", error);
+        return [];
+      }
+    }
+
+    function saveProducts() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
+    }
+
+    // =========================================================
+    // 上位互換・割高判定
+    // =========================================================
+    function findDominatingProduct(targetProduct) {
+      const candidates = products.filter((candidate) => {
+        const isOtherProduct = candidate.id !== targetProduct.id;
+        const isNotMoreExpensive = candidate.price <= targetProduct.price;
+        const hasAllTargetContents = hasRequiredQuantities(candidate.parts, targetProduct.parts);
+
+        if (!isOtherProduct || !isNotMoreExpensive || !hasAllTargetContents) {
+          return false;
+        }
+
+        const isCheaper = candidate.price < targetProduct.price;
+        const hasMoreContents = hasStrictlyMoreContents(candidate.parts, targetProduct.parts);
+        return isCheaper || hasMoreContents;
+      });
+
+      candidates.sort((left, right) => {
+        const priceDifference = left.price - right.price;
+
+        if (priceDifference !== 0) {
+          return priceDifference;
+        }
+
+        const leftQuantity = left.parts.reduce((sum, part) => sum + part.quantity, 0);
+        const rightQuantity = right.parts.reduce((sum, part) => sum + part.quantity, 0);
+        return rightQuantity - leftQuantity;
+      });
+
+      return candidates[0];
+    }
+
+    function getDominanceMessage(product) {
+      const dominatingProduct = findDominatingProduct(product);
+
+      if (!dominatingProduct) {
+        return {
+          className: "good",
+          label: "候補",
+          detail: "",
+        };
+      }
+
+      const difference = product.price - dominatingProduct.price;
+      let detail = `${dominatingProduct.name} の方が`;
+
+      if (difference > 0) {
+        detail += `${formatPrice(difference)}安く、`;
+      } else {
+        detail += "同額で、";
+      }
+
+      detail += "必要な個数をすべて満たします。";
+
+      return {
+        className: "bad",
+        label: "買わない方がよい",
+        detail,
+      };
+    }
+
+    // =========================================================
+    // 検索
+    // =========================================================
+    function getProductsContainingWantedPart(wantedParts) {
+      return products
+        .map((product) => {
+          const matchedParts = product.parts.filter((part) =>
+            wantedParts.some((wantedPart) => wantedPart.name === part.name)
+          );
+
+          return {
+            product,
+            matchedParts,
+          };
+        })
+        .filter((entry) => !!entry.matchedParts.length)
+        .sort((left, right) => {
+          const leftMatchedQuantity = left.matchedParts.reduce((sum, part) => sum + part.quantity, 0);
+          const rightMatchedQuantity = right.matchedParts.reduce((sum, part) => sum + part.quantity, 0);
+          const quantityDifference = rightMatchedQuantity - leftMatchedQuantity;
+
+          if (quantityDifference !== 0) {
+            return quantityDifference;
+          }
+
+          return left.product.price - right.product.price;
+        });
+    }
+
+    function getCheapestSingleProduct(wantedParts) {
+      const candidates = products
+        .filter((product) => hasRequiredQuantities(product.parts, wantedParts))
+        .sort((left, right) => left.price - right.price);
+
+      return candidates[0];
+    }
+
+    // =========================================================
+    // 最安組み合わせ計算
+    // 同じ商品を複数個買えるよう、状態空間上の最短経路として計算します。
+    // =========================================================
+    class MinHeap {
+      constructor() {
+        this.items = [];
+      }
+
+      push(item) {
+        this.items.push(item);
+        let index = this.items.length - 1;
+
+        while (index > 0) {
+          const parentIndex = Math.floor((index - 1) / 2);
+          const isOrdered = this.items[parentIndex].cost <= this.items[index].cost;
+
+          if (isOrdered) {
+            break;
+          }
+
+          [this.items[parentIndex], this.items[index]] = [
+            this.items[index],
+            this.items[parentIndex],
+          ];
+
+          index = parentIndex;
+        }
+      }
+
+      pop() {
+        if (!this.items.length) {
+          return undefined;
+        }
+
+        const firstItem = this.items[0];
+        const lastItem = this.items.pop();
+
+        if (!this.items.length) {
+          return firstItem;
+        }
+
+        this.items[0] = lastItem;
+        let index = 0;
+
+        while (true) {
+          const leftIndex = index * 2 + 1;
+          const rightIndex = leftIndex + 1;
+          let smallestIndex = index;
+
+          const hasLeft = leftIndex < this.items.length;
+          const hasRight = rightIndex < this.items.length;
+
+          if (hasLeft && this.items[leftIndex].cost < this.items[smallestIndex].cost) {
+            smallestIndex = leftIndex;
+          }
+
+          if (hasRight && this.items[rightIndex].cost < this.items[smallestIndex].cost) {
+            smallestIndex = rightIndex;
+          }
+
+          const isOrdered = smallestIndex === index;
+
+          if (isOrdered) {
+            break;
+          }
+
+          [this.items[index], this.items[smallestIndex]] = [
+            this.items[smallestIndex],
+            this.items[index],
+          ];
+
+          index = smallestIndex;
+        }
+
+        return firstItem;
+      }
+
+      get length() {
+        return this.items.length;
+      }
+    }
+
+    function getStateKey(quantities) {
+      return quantities.join(",");
+    }
+
+    function getCheapestCombination(wantedParts) {
+      const relevantProducts = products
+        .map((product, productIndex) => {
+          const addedQuantities = wantedParts.map((wantedPart) =>
+            Math.min(
+              wantedPart.quantity,
+              getQuantity(product.parts, wantedPart.name)
+            )
+          );
+
+          const hasUsefulPart = addedQuantities.some((quantity) => !!quantity);
+
+          return {
+            product,
+            productIndex,
+            addedQuantities,
+            hasUsefulPart,
+          };
+        })
+        .filter((entry) => entry.hasUsefulPart);
+
+      if (!relevantProducts.length) {
+        return {
+          error: "登録商品だけでは、欲しいパーツを揃えられません。",
+        };
+      }
+
+      const stateCount = wantedParts.reduce(
+        (count, part) => count * (part.quantity + 1),
+        1
+      );
+
+      if (stateCount > MAX_SEARCH_STATES) {
+        return {
+          error: `必要個数の組み合わせが多すぎるため計算できません。状態数の上限は${MAX_SEARCH_STATES.toLocaleString("ja-JP")}です。`,
+        };
+      }
+
+      const startQuantities = wantedParts.map(() => 0);
+      const goalQuantities = wantedParts.map((part) => part.quantity);
+      const startKey = getStateKey(startQuantities);
+      const goalKey = getStateKey(goalQuantities);
+
+      const bestCost = new Map([[startKey, 0]]);
+      const previous = new Map();
+      const heap = new MinHeap();
+
+      heap.push({
+        key: startKey,
+        quantities: startQuantities,
+        cost: 0,
+      });
+
+      while (heap.length) {
+        const current = heap.pop();
+        const knownCost = bestCost.get(current.key);
+        const isOutdated = knownCost !== current.cost;
+
+        if (isOutdated) {
+          continue;
+        }
+
+        if (current.key === goalKey) {
+          break;
+        }
+
+        for (const entry of relevantProducts) {
+          const nextQuantities = current.quantities.map((currentQuantity, index) => {
+            const wantedQuantity = wantedParts[index].quantity;
+            const addedQuantity = entry.addedQuantities[index];
+            return Math.min(wantedQuantity, currentQuantity + addedQuantity);
+          });
+
+          const nextKey = getStateKey(nextQuantities);
+          const isSameState = nextKey === current.key;
+
+          if (isSameState) {
+            continue;
+          }
+
+          const nextCost = current.cost + entry.product.price;
+          const currentBestCost = bestCost.get(nextKey);
+          const isBetter = currentBestCost === undefined || nextCost < currentBestCost;
+
+          if (!isBetter) {
+            continue;
+          }
+
+          bestCost.set(nextKey, nextCost);
+          previous.set(nextKey, {
+            previousKey: current.key,
+            productIndex: entry.productIndex,
+          });
+
+          heap.push({
+            key: nextKey,
+            quantities: nextQuantities,
+            cost: nextCost,
+          });
+        }
+      }
+
+      const goalCost = bestCost.get(goalKey);
+
+      if (goalCost === undefined) {
+        return {
+          error: "登録商品だけでは、欲しいパーツをすべて揃えられません。",
+        };
+      }
+
+      const purchaseCounts = new Map();
+      let currentKey = goalKey;
+
+      while (currentKey !== startKey) {
+        const step = previous.get(currentKey);
+
+        if (!step) {
+          return {
+            error: "最安組み合わせの復元に失敗しました。",
+          };
+        }
+
+        const currentCount = purchaseCounts.get(step.productIndex) || 0;
+        purchaseCounts.set(step.productIndex, currentCount + 1);
+        currentKey = step.previousKey;
+      }
+
+      const purchases = [...purchaseCounts.entries()]
+        .map(([productIndex, quantity]) => ({
+          product: products[productIndex],
+          quantity,
+        }))
+        .sort((left, right) => left.product.name.localeCompare(right.product.name, "ja"));
+
+      return {
+        cost: goalCost,
+        purchases,
+      };
+    }
+
+    // =========================================================
+    // パーツ単価の参考推定
+    // 各商品の式を「Σ(単価 × 個数) ≒ 商品価格」として解きます。
+    // =========================================================
+    function estimatePartPrices() {
+      const partNames = getAllPartNames();
+
+      if (!partNames.length || !products.length) {
+        return new Map();
+      }
+
+      const partIndexMap = new Map(partNames.map((partName, index) => [partName, index]));
+      const matrix = products.map((product) => {
+        const row = new Array(partNames.length).fill(0);
+
+        for (const part of product.parts) {
+          const partIndex = partIndexMap.get(part.name);
+
+          if (partIndex === undefined) {
+            continue;
+          }
+
+          row[partIndex] = part.quantity;
+        }
+
+        return row;
+      });
+
+      const prices = products.map((product) => product.price);
+      const estimates = new Array(partNames.length).fill(0);
+
+      // 初期値は、各商品価格を総パーツ個数で均等割りした値から作ります。
+      for (let partIndex = 0; partIndex < partNames.length; partIndex += 1) {
+        let initialValue = Infinity;
+
+        for (let productIndex = 0; productIndex < products.length; productIndex += 1) {
+          const coefficient = matrix[productIndex][partIndex];
+
+          if (!coefficient) {
+            continue;
+          }
+
+          const product = products[productIndex];
+          const totalQuantity = product.parts.reduce(
+            (sum, part) => sum + part.quantity,
+            0
+          );
+          const candidateValue = product.price / totalQuantity;
+          initialValue = Math.min(initialValue, candidateValue);
+        }
+
+        estimates[partIndex] = Number.isFinite(initialValue) ? initialValue : 0;
+      }
+
+      const maxIterations = 4000;
+      const tolerance = 0.0001;
+
+      for (let iteration = 0; iteration < maxIterations; iteration += 1) {
+        let maxChange = 0;
+
+        for (let targetPartIndex = 0; targetPartIndex < partNames.length; targetPartIndex += 1) {
+          let numerator = 0;
+          let denominator = 0;
+
+          for (let productIndex = 0; productIndex < products.length; productIndex += 1) {
+            const coefficient = matrix[productIndex][targetPartIndex];
+
+            if (!coefficient) {
+              continue;
+            }
+
+            let otherPartsValue = 0;
+
+            for (let partIndex = 0; partIndex < partNames.length; partIndex += 1) {
+              const isTargetPart = partIndex === targetPartIndex;
+
+              if (isTargetPart) {
+                continue;
+              }
+
+              otherPartsValue += matrix[productIndex][partIndex] * estimates[partIndex];
+            }
+
+            numerator += coefficient * (prices[productIndex] - otherPartsValue);
+            denominator += coefficient * coefficient;
+          }
+
+          if (!denominator) {
+            continue;
+          }
+
+          const nextValue = Math.max(0, numerator / denominator);
+          const change = Math.abs(nextValue - estimates[targetPartIndex]);
+          maxChange = Math.max(maxChange, change);
+          estimates[targetPartIndex] = nextValue;
+        }
+
+        const isConverged = maxChange < tolerance;
+
+        if (isConverged) {
+          break;
+        }
+      }
+
+      return new Map(
+        partNames.map((partName, index) => [partName, estimates[index]])
+      );
+    }
+
+    function getCheapestStandaloneProduct(partName) {
+      const candidates = products
+        .filter((product) => {
+          const hasOnlyOnePartType = product.parts.length === 1;
+          const isTargetPart = product.parts[0]?.name === partName;
+          return hasOnlyOnePartType && isTargetPart;
+        })
+        .sort((left, right) => {
+          const leftUnitPrice = left.price / left.parts[0].quantity;
+          const rightUnitPrice = right.price / right.parts[0].quantity;
+          return leftUnitPrice - rightUnitPrice;
+        });
+
+      return candidates[0];
+    }
+
+    function getCheapestProductContainingPart(partName) {
+      const candidates = products
+        .filter((product) => product.parts.some((part) => part.name === partName))
+        .sort((left, right) => left.price - right.price);
+
+      return candidates[0];
+    }
+
+    // =========================================================
+    // 商品登録・編集
+    // =========================================================
+    function validateProductInput() {
+      const name = productNameInput.value.trim();
+      const price = Number(productPriceInput.value);
+      const parts = parsePartEntries(productPartsInput.value);
+
+      if (!name) {
+        return {
+          error: "商品名を入力してください。",
+        };
+      }
+
+      const hasValidPrice = Number.isFinite(price) && price >= 0;
+
+      if (!hasValidPrice) {
+        return {
+          error: "価格は0円以上の数値で入力してください。",
+        };
+      }
+
+      if (!parts.length) {
+        return {
+          error: "含まれるパーツを1つ以上入力してください。",
+        };
+      }
+
+      return {
+        product: {
+          name,
+          price,
+          parts,
+        },
+      };
+    }
+
+    function handleSaveProduct() {
+      const validation = validateProductInput();
+
+      if (validation.error) {
+        showFormMessage(validation.error, true);
+        return;
+      }
+
+      const inputProduct = validation.product;
+      const isEditing = !!editingProductId;
+
+      if (isEditing) {
+        const product = products.find((item) => item.id === editingProductId);
+
+        if (!product) {
+          showFormMessage("編集対象の商品が見つかりません。", true);
+          stopEditing();
+          return;
+        }
+
+        product.name = inputProduct.name;
+        product.price = inputProduct.price;
+        product.parts = inputProduct.parts;
+
+        showFormMessage("商品を更新しました。", false);
+      } else {
+        products.push({
+          id: createId(),
+          name: inputProduct.name,
+          price: inputProduct.price,
+          parts: inputProduct.parts,
+        });
+
+        showFormMessage("商品を追加しました。", false);
+      }
+
+      saveProducts();
+      clearProductForm();
+      stopEditing();
+      renderAll();
+    }
+
+    function startEditing(productId) {
+      const product = products.find((item) => item.id === productId);
+
+      if (!product) {
+        return;
+      }
+
+      editingProductId = product.id;
+      productNameInput.value = product.name;
+      productPriceInput.value = String(product.price);
+      productPartsInput.value = product.parts.map(formatPart).join("\n");
+      saveProductButton.textContent = "変更を保存";
+      cancelEditButton.classList.remove("hidden");
+      productNameInput.focus();
+    }
+
+    function stopEditing() {
+      editingProductId = "";
+      saveProductButton.textContent = "商品を追加";
+      cancelEditButton.classList.add("hidden");
+    }
+
+    function clearProductForm() {
+      productNameInput.value = "";
+      productPriceInput.value = "";
+      productPartsInput.value = "";
+    }
+
+    function showFormMessage(message, isError) {
+      formMessage.textContent = message;
+      formMessage.classList.remove("error", "success");
+      formMessage.classList.add(isError ? "error" : "success");
+    }
+
+    function deleteProduct(productId) {
+      const product = products.find((item) => item.id === productId);
+
+      if (!product) {
+        return;
+      }
+
+      const isConfirmed = window.confirm(`「${product.name}」を削除しますか？`);
+
+      if (!isConfirmed) {
+        return;
+      }
+
+      products = products.filter((item) => item.id !== productId);
+      saveProducts();
+
+      if (editingProductId === productId) {
+        clearProductForm();
+        stopEditing();
+      }
+
+      renderAll();
+    }
+
+    // =========================================================
+    // 描画
+    // =========================================================
+    function renderAll() {
+      renderProductTable();
+      renderPartPriceTable();
+      renderSuggestions();
+      renderSummary();
+
+      const hasSearchValue = !!wantedPartsInput.value.trim();
+
+      if (hasSearchValue) {
+        runSearch();
+      }
+    }
+
+    function renderSummary() {
+      const partNames = getAllPartNames();
+      const dominatedProducts = products.filter(
+        (product) => !!findDominatingProduct(product)
+      );
+
+      productCount.textContent = String(products.length);
+      partCount.textContent = String(partNames.length);
+      dominatedCount.textContent = String(dominatedProducts.length);
+    }
+
+    function renderSuggestions() {
+      const partNames = getAllPartNames();
+
+      partSuggestions.innerHTML = partNames
+        .map((partName) => `<option value="${escapeHtml(partName)}"></option>`)
+        .join("");
+    }
+
+    function renderProductTable() {
+      if (!products.length) {
+        productTableBody.innerHTML = `
+          <tr>
+            <td colspan="5" class="muted">まだ商品が登録されていません。</td>
+          </tr>
+        `;
+        return;
+      }
+
+      const sortedProducts = [...products].sort((left, right) =>
+        left.name.localeCompare(right.name, "ja")
+      );
+
+      productTableBody.innerHTML = sortedProducts
+        .map((product) => {
+          const dominance = getDominanceMessage(product);
+          const partHtml = product.parts
+            .map((part) => `<span class="chip">${escapeHtml(formatPart(part))}</span>`)
+            .join("");
+
+          const detailHtml = dominance.detail
+            ? `<div class="muted" style="margin-top: 5px;">${escapeHtml(dominance.detail)}</div>`
+            : "";
+
+          return `
+            <tr>
+              <td><strong>${escapeHtml(product.name)}</strong></td>
+              <td class="price">${formatPrice(product.price)}</td>
+              <td><div class="part-list">${partHtml}</div></td>
+              <td>
+                <span class="status ${dominance.className}">${escapeHtml(dominance.label)}</span>
+                ${detailHtml}
+              </td>
+              <td>
+                <div class="button-row">
+                  <button
+                    class="button"
+                    type="button"
+                    data-action="edit"
+                    data-product-id="${escapeHtml(product.id)}"
+                  >編集</button>
+                  <button
+                    class="button danger"
+                    type="button"
+                    data-action="delete"
+                    data-product-id="${escapeHtml(product.id)}"
+                  >削除</button>
+                </div>
+              </td>
+            </tr>
+          `;
+        })
+        .join("");
+    }
+
+    function renderPartPriceTable() {
+      const partNames = getAllPartNames();
+
+      if (!partNames.length) {
+        partPriceTableBody.innerHTML = `
+          <tr>
+            <td colspan="4" class="muted">商品を登録すると参考推定単価を表示します。</td>
+          </tr>
+        `;
+        return;
+      }
+
+      const estimatedPrices = estimatePartPrices();
+
+      partPriceTableBody.innerHTML = partNames
+        .map((partName) => {
+          const estimatedPrice = estimatedPrices.get(partName) || 0;
+          const standaloneProduct = getCheapestStandaloneProduct(partName);
+          const cheapestProduct = getCheapestProductContainingPart(partName);
+
+          let standaloneText = "なし";
+
+          if (standaloneProduct) {
+            const quantity = standaloneProduct.parts[0].quantity;
+            const unitPrice = standaloneProduct.price / quantity;
+            standaloneText =
+              `${standaloneProduct.name} / ${formatPrice(standaloneProduct.price)}` +
+              `（${partName}×${quantity} → ${formatPrice(unitPrice)}/個）`;
+          }
+
+          let cheapestText = "なし";
+
+          if (cheapestProduct) {
+            const quantity = getQuantity(cheapestProduct.parts, partName);
+            cheapestText =
+              `${cheapestProduct.name} / ${formatPrice(cheapestProduct.price)}` +
+              `（${partName}×${quantity}）`;
+          }
+
+          return `
+            <tr>
+              <td><strong>${escapeHtml(partName)}</strong></td>
+              <td class="price">${formatPrice(estimatedPrice)}</td>
+              <td>${escapeHtml(standaloneText)}</td>
+              <td>${escapeHtml(cheapestText)}</td>
+            </tr>
+          `;
+        })
+        .join("");
+    }
+
+    function runSearch() {
+      const wantedParts = parsePartEntries(wantedPartsInput.value);
+
+      if (!wantedParts.length) {
+        searchResult.innerHTML = `
+          <div class="result-box">
+            <p class="muted">欲しいパーツを入力してください。</p>
+          </div>
+        `;
+        return;
+      }
+
+      const knownPartNames = new Set(getAllPartNames());
+      const unknownParts = wantedParts.filter(
+        (part) => !knownPartNames.has(part.name)
+      );
+
+      if (unknownParts.length) {
+        const unknownText = unknownParts
+          .map((part) => `「${escapeHtml(part.name)}」`)
+          .join("、");
+
+        searchResult.innerHTML = `
+          <div class="result-box">
+            <p class="danger-text">未登録のパーツがあります：${unknownText}</p>
+          </div>
+        `;
+        return;
+      }
+
+      const singleProduct = getCheapestSingleProduct(wantedParts);
+      const combination = getCheapestCombination(wantedParts);
+      const matchingProducts = getProductsContainingWantedPart(wantedParts);
+      const wantedNames = new Set(wantedParts.map((part) => part.name));
+
+      let recommendationHtml = "";
+
+      if (combination.error) {
+        recommendationHtml = `
+          <div class="result-box">
+            <h3>最安購入組み合わせ</h3>
+            <p class="danger-text">${escapeHtml(combination.error)}</p>
+          </div>
+        `;
+      } else {
+        const itemHtml = combination.purchases
+          .map((purchase) => {
+            const quantityText = purchase.quantity > 1 ? ` × ${purchase.quantity}個` : "";
+            const subtotal = purchase.product.price * purchase.quantity;
+
+            return `
+              <li>
+                ${escapeHtml(purchase.product.name)}${escapeHtml(quantityText)}
+                ：${formatPrice(subtotal)}
+              </li>
+            `;
+          })
+          .join("");
+
+        recommendationHtml = `
+          <div class="result-box good">
+            <h3>最安購入組み合わせ</h3>
+            <p><strong>合計 ${formatPrice(combination.cost)}</strong></p>
+            <p class="muted">必要：${escapeHtml(formatParts(wantedParts))}</p>
+            <ul>${itemHtml}</ul>
+          </div>
+        `;
+      }
+
+      let singleProductHtml = `
+        <div class="result-box">
+          <h3>1商品だけで揃える場合</h3>
+          <p class="muted">必要個数を1商品だけで満たす商品はありません。</p>
+        </div>
+      `;
+
+      if (singleProduct) {
+        const dominance = getDominanceMessage(singleProduct);
+        const warningHtml = dominance.detail
+          ? `<p class="danger-text">買わない方がよい：${escapeHtml(dominance.detail)}</p>`
+          : "";
+
+        singleProductHtml = `
+          <div class="result-box">
+            <h3>1商品だけで揃える場合</h3>
+            <p>
+              <strong>${escapeHtml(singleProduct.name)}</strong>
+              ／ ${formatPrice(singleProduct.price)}
+            </p>
+            <p class="muted">${escapeHtml(formatParts(singleProduct.parts))}</p>
+            ${warningHtml}
+          </div>
+        `;
+      }
+
+      let candidateRows = `
+        <tr>
+          <td colspan="4" class="muted">該当商品はありません。</td>
+        </tr>
+      `;
+
+      if (matchingProducts.length) {
+        candidateRows = matchingProducts
+          .map((entry) => {
+            const dominance = getDominanceMessage(entry.product);
+            const matchedHtml = entry.product.parts
+              .map((part) => {
+                const isHit = wantedNames.has(part.name);
+                const className = isHit ? "chip hit" : "chip";
+
+                return `
+                  <span class="${className}">
+                    ${escapeHtml(formatPart(part))}
+                  </span>
+                `;
+              })
+              .join("");
+
+            const statusDetail = dominance.detail
+              ? `<div class="muted" style="margin-top: 5px;">${escapeHtml(dominance.detail)}</div>`
+              : "";
+
+            return `
+              <tr>
+                <td><strong>${escapeHtml(entry.product.name)}</strong></td>
+                <td class="price">${formatPrice(entry.product.price)}</td>
+                <td><div class="part-list">${matchedHtml}</div></td>
+                <td>
+                  <span class="status ${dominance.className}">${escapeHtml(dominance.label)}</span>
+                  ${statusDetail}
+                </td>
+              </tr>
+            `;
+          })
+          .join("");
+      }
+
+      searchResult.innerHTML = `
+        ${recommendationHtml}
+        ${singleProductHtml}
+
+        <div class="result-box">
+          <h3>該当商品一覧</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>商品</th>
+                  <th>価格</th>
+                  <th>パーツ</th>
+                  <th>判定</th>
+                </tr>
+              </thead>
+              <tbody>${candidateRows}</tbody>
+            </table>
+          </div>
+        </div>
+      `;
+    }
+
+    // =========================================================
+    // JSON入出力
+    // =========================================================
+    function exportJson() {
+      const jsonText = JSON.stringify(products, null, 2);
+      const blob = new Blob([jsonText], {
+        type: "application/json",
+      });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+
+      anchor.href = url;
+      anchor.download = "parts-price-tool-data.json";
+      anchor.click();
+
+      URL.revokeObjectURL(url);
+    }
+
+    async function importJson(file) {
+      try {
+        const text = await file.text();
+        const parsedValue = JSON.parse(text);
+
+        if (!Array.isArray(parsedValue)) {
+          throw new Error("配列形式ではありません。");
+        }
+
+        const importedProducts = parsedValue
+          .map((product) => {
+            const name = String(product?.name || "").trim();
+            const price = Number(product?.price);
+            const parts = normalizeStoredParts(product?.parts);
+
+            const hasName = !!name;
+            const hasValidPrice = Number.isFinite(price) && price >= 0;
+            const hasParts = !!parts.length;
+            const isValid = hasName && hasValidPrice && hasParts;
+
+            if (!isValid) {
+              return null;
+            }
+
+            return {
+              id: String(product?.id || createId()),
+              name,
+              price,
+              parts,
+            };
+          })
+          .filter((product) => !!product);
+
+        if (!importedProducts.length) {
+          throw new Error("有効な商品データがありません。");
+        }
+
+        const isConfirmed = window.confirm(
+          `現在のデータを置き換えて、${importedProducts.length}件を読み込みますか？`
+        );
+
+        if (!isConfirmed) {
+          return;
+        }
+
+        products = importedProducts;
+        saveProducts();
+        renderAll();
+        showFormMessage("JSONを読み込みました。", false);
+      } catch (error) {
+        console.error("JSONの読み込みに失敗しました。", error);
+        showFormMessage(`JSONを読み込めませんでした：${error.message}`, true);
+      } finally {
+        importFile.value = "";
+      }
+    }
+
+    // =========================================================
+    // イベント
+    // =========================================================
+    saveProductButton.addEventListener("click", handleSaveProduct);
+
+    cancelEditButton.addEventListener("click", () => {
+      clearProductForm();
+      stopEditing();
+      showFormMessage("編集を中止しました。", false);
+    });
+
+    searchButton.addEventListener("click", runSearch);
+
+    clearSearchButton.addEventListener("click", () => {
+      wantedPartsInput.value = "";
+      searchResult.innerHTML = "";
+    });
+
+    wantedPartsInput.addEventListener("keydown", (event) => {
+      const isEnter = event.key === "Enter";
+
+      if (!isEnter) {
+        return;
+      }
+
+      event.preventDefault();
+      runSearch();
+    });
+
+    productTableBody.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-action]");
+
+      if (!button) {
+        return;
+      }
+
+      const productId = button.dataset.productId;
+      const action = button.dataset.action;
+
+      if (action === "edit") {
+        startEditing(productId);
+        return;
+      }
+
+      if (action === "delete") {
+        deleteProduct(productId);
+      }
+    });
+
+    exportButton.addEventListener("click", exportJson);
+
+    importButton.addEventListener("click", () => {
+      importFile.click();
+    });
+
+    importFile.addEventListener("change", () => {
+      const file = importFile.files?.[0];
+
+      if (!file) {
+        return;
+      }
+
+      importJson(file);
+    });
+
+    resetButton.addEventListener("click", () => {
+      const isConfirmed = window.confirm("登録済みの商品データをすべて削除しますか？");
+
+      if (!isConfirmed) {
+        return;
+      }
+
+      products = [];
+      saveProducts();
+      clearProductForm();
+      stopEditing();
+      wantedPartsInput.value = "";
+      searchResult.innerHTML = "";
+      renderAll();
+      showFormMessage("全データを削除しました。", false);
+    });
+
+    // =========================================================
+    // 初期表示
+    // =========================================================
+    renderAll();
+  </script>
+</body>
+</html>
