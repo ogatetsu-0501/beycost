@@ -523,6 +523,64 @@
     let editingProductId = "";
 
     // =========================================================
+    // 初期カタログ読込
+    // localStorage が空の初回アクセス時だけ、静的 products.json を読み込みます。
+    // 2回目以降はユーザーが編集・追加したブラウザ保存データを優先します。
+    // =========================================================
+    async function loadInitialCatalogIfNeeded() {
+      const hasSavedProducts = !!products.length;
+
+      if (hasSavedProducts) {
+        return;
+      }
+
+      try {
+        const response = await fetch("./products.json", {
+          cache: "no-store",
+        });
+
+        if (!response.ok) {
+          throw new Error(`商品データの取得に失敗しました（HTTP ${response.status}）`);
+        }
+
+        const catalogProducts = await response.json();
+        const isValidCatalog = Array.isArray(catalogProducts) && !!catalogProducts.length;
+
+        if (!isValidCatalog) {
+          throw new Error("商品データが空、または形式が不正です。");
+        }
+
+        products = catalogProducts
+          .map((product) => {
+            const name = String(product?.name || "").trim();
+            const price = Number(product?.price);
+            const parts = normalizeStoredParts(product?.parts);
+
+            const hasName = !!name;
+            const hasValidPrice = Number.isFinite(price) && price >= 0;
+            const hasParts = !!parts.length;
+            const isValidProduct = hasName && hasValidPrice && hasParts;
+
+            if (!isValidProduct) {
+              return null;
+            }
+
+            return {
+              id: String(product?.id || createId()),
+              name,
+              price,
+              parts,
+            };
+          })
+          .filter((product) => !!product);
+
+        saveProducts();
+      } catch (error) {
+        console.error("初期商品データの読み込みに失敗しました。", error);
+      }
+    }
+
+    // =========================================================
     // 文字列・表示用
     // =========================================================
     function escapeHtml(value) {
@@ -1775,7 +1833,12 @@
     // =========================================================
     // 初期表示
     // =========================================================
-    renderAll();
+    async function initialize() {
+      await loadInitialCatalogIfNeeded();
+      renderAll();
+    }
+
+    initialize();
   </script>
 </body>
 </html>
