@@ -172,7 +172,7 @@ def decompose_bey(value: str) -> list[str]:
     normalized = remove_variant_suffix(value)
     match = BEY_PATTERN.match(normalized)
 
-    if !match:
+    if not match:
         return [normalized] if normalized else []
 
     blade_name = match.group(1).strip()
