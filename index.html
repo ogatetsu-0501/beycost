@@ -490,6 +490,54 @@
     const PRICE_FORMATTER = new Intl.NumberFormat("ja-JP");
 
     // =========================================================
+    // 価値を持つパーツ
+    // この一覧にないパーツは、価格計算上は0円として扱います。
+    // =========================================================
+    const VALUED_PART_LABELS = new Map([
+      ["0-60", "0-60"],
+      ["1-50", "1-50"],
+      ["1-60", "1-60"],
+      ["1-70", "1-70"],
+      ["3-60", "3-60"],
+      ["5-60", "5-60"],
+      ["7-60", "7-60"],
+      ["7-70", "7-70"],
+      ["9-60", "9-60"],
+      ["9-65", "9-65"],
+      ["9-70", "9-70"],
+      ["W(ウィール)", "W(ウィール)"],
+      ["ウィザードロッド", "ウィザードロッド"],
+      ["シャークスケイル", "シャークスケイル"],
+      ["コバルトドラグーン", "コバルトドラグーン"],
+      ["メテオドラグーン", "メテオドラグーン"],
+      ["バレットグリフォン", "バレットグリフォン"],
+      ["グローリーワルキューレ", "グローリーワルキューレ"],
+      ["エアロペガサス", "エアロペガサス"],
+      ["クロックミラージュ", "クロックミラージュ"],
+      ["ブラスト", "ブラスト"],
+      ["LF", "LFローフラット"],
+      ["R", "Rラッシュ"],
+      ["L", "Lレベル"],
+      ["LR", "LRローラッシュ"],
+      ["UF", "UFアンダーフラット"],
+      ["FF", "FFフリーフラット"],
+      ["T", "Tテーパー"],
+      ["P", "Pポイント"],
+      ["H", "Hヘキサ"],
+      ["E", "Eエレベート"],
+      ["K", "Kキック"],
+      ["B", "Bボール"],
+      ["O", "Oオーブ"],
+      ["FB", "FBフリーボール"],
+      ["LO", "LOローオーブ"],
+      ["Nr", "Nrナロー"],
+      ["UN", "UNアンダーニードル"],
+      ["W", "Wウェッジ"],
+    ]);
+
+    const VALUED_PART_NAMES = new Set(VALUED_PART_LABELS.keys());
+
+    // =========================================================
     // DOM参照
     // =========================================================
     const productNameInput = document.getElementById("product-name");
@@ -602,9 +650,18 @@
       return `${timePart}-${randomPart}`;
     }
 
+    function getPartDisplayName(partName) {
+      return VALUED_PART_LABELS.get(partName) || partName;
+    }
+
     function formatPart(part) {
+      const displayName = getPartDisplayName(part.name);
       const hasMultiple = part.quantity > 1;
-      return hasMultiple ? `${part.name}×${part.quantity}` : part.name;
+      return hasMultiple ? `${displayName}×${part.quantity}` : displayName;
+    }
+
+    function getValuedParts(parts) {
+      return parts.filter((part) => VALUED_PART_NAMES.has(part.name));
     }
 
     function formatParts(parts) {
@@ -643,8 +700,15 @@
         quantityMap.set(name, currentQuantity + quantity);
       }
 
+      const displayToInternalName = new Map(
+        [...VALUED_PART_LABELS.entries()].map(([internalName, displayName]) => [
+          displayName,
+          internalName,
+        ])
+      );
+
       return [...quantityMap.entries()].map(([name, quantity]) => ({
-        name,
+        name: displayToInternalName.get(name) || name,
         quantity,
       }));
     }
@@ -719,11 +783,17 @@
 
       for (const product of products) {
         for (const part of product.parts) {
-          names.add(part.name);
+          if (VALUED_PART_NAMES.has(part.name)) {
+            names.add(part.name);
+          }
         }
       }
 
-      return [...names].sort((left, right) => left.localeCompare(right, "ja"));
+      return [...names].sort((left, right) => {
+        const leftLabel = getPartDisplayName(left);
+        const rightLabel = getPartDisplayName(right);
+        return leftLabel.localeCompare(rightLabel, "ja");
+      });
     }
 
     // =========================================================
@@ -779,17 +849,31 @@
     // 上位互換・割高判定
     // =========================================================
     function findDominatingProduct(targetProduct) {
+      const targetValuedParts = getValuedParts(targetProduct.parts);
+
+      if (!targetValuedParts.length) {
+        return undefined;
+      }
+
       const candidates = products.filter((candidate) => {
+        const candidateValuedParts = getValuedParts(candidate.parts);
         const isOtherProduct = candidate.id !== targetProduct.id;
         const isNotMoreExpensive = candidate.price <= targetProduct.price;
-        const hasAllTargetContents = hasRequiredQuantities(candidate.parts, targetProduct.parts);
+        const hasAllTargetContents = hasRequiredQuantities(
+          candidateValuedParts,
+          targetValuedParts
+        );
 
         if (!isOtherProduct || !isNotMoreExpensive || !hasAllTargetContents) {
           return false;
         }
 
         const isCheaper = candidate.price < targetProduct.price;
-        const hasMoreContents = hasStrictlyMoreContents(candidate.parts, targetProduct.parts);
+        const hasMoreContents = hasStrictlyMoreContents(
+          candidateValuedParts,
+          targetValuedParts
+        );
+
         return isCheaper || hasMoreContents;
       });
 
@@ -800,8 +884,11 @@
           return priceDifference;
         }
 
-        const leftQuantity = left.parts.reduce((sum, part) => sum + part.quantity, 0);
-        const rightQuantity = right.parts.reduce((sum, part) => sum + part.quantity, 0);
+        const leftQuantity = getValuedParts(left.parts)
+          .reduce((sum, part) => sum + part.quantity, 0);
+        const rightQuantity = getValuedParts(right.parts)
+          .reduce((sum, part) => sum + part.quantity, 0);
+
         return rightQuantity - leftQuantity;
       });
 
@@ -1112,11 +1199,20 @@
         return new Map();
       }
 
-      const partIndexMap = new Map(partNames.map((partName, index) => [partName, index]));
-      const matrix = products.map((product) => {
+      const partIndexMap = new Map(
+        partNames.map((partName, index) => [partName, index])
+      );
+
+      // 価値対象パーツが1つも入っていない商品は、
+      // ユーザー指定により「中身の価値0円」なので価格推定式から除外します。
+      const estimationProducts = products.filter((product) =>
+        getValuedParts(product.parts).length
+      );
+
+      const matrix = estimationProducts.map((product) => {
         const row = new Array(partNames.length).fill(0);
 
-        for (const part of product.parts) {
+        for (const part of getValuedParts(product.parts)) {
           const partIndex = partIndexMap.get(part.name);
 
           if (partIndex === undefined) {
@@ -1129,30 +1225,35 @@
         return row;
       });
 
-      const prices = products.map((product) => product.price);
+      const prices = estimationProducts.map((product) => product.price);
       const estimates = new Array(partNames.length).fill(0);
 
-      // 初期値は、各商品価格を総パーツ個数で均等割りした値から作ります。
+      // 初期値は、その商品の価格を「価値対象パーツの総個数」で均等割りします。
       for (let partIndex = 0; partIndex < partNames.length; partIndex += 1) {
         let initialValue = Infinity;
 
-        for (let productIndex = 0; productIndex < products.length; productIndex += 1) {
+        for (
+          let productIndex = 0;
+          productIndex < estimationProducts.length;
+          productIndex += 1
+        ) {
           const coefficient = matrix[productIndex][partIndex];
 
           if (!coefficient) {
             continue;
           }
 
-          const product = products[productIndex];
-          const totalQuantity = product.parts.reduce(
-            (sum, part) => sum + part.quantity,
-            0
-          );
-          const candidateValue = product.price / totalQuantity;
+          const product = estimationProducts[productIndex];
+          const totalValuedQuantity = getValuedParts(product.parts)
+            .reduce((sum, part) => sum + part.quantity, 0);
+          const candidateValue = product.price / totalValuedQuantity;
+
           initialValue = Math.min(initialValue, candidateValue);
         }
 
-        estimates[partIndex] = Number.isFinite(initialValue) ? initialValue : 0;
+        estimates[partIndex] = Number.isFinite(initialValue)
+          ? initialValue
+          : 0;
       }
 
       const maxIterations = 4000;
@@ -1161,11 +1262,19 @@
       for (let iteration = 0; iteration < maxIterations; iteration += 1) {
         let maxChange = 0;
 
-        for (let targetPartIndex = 0; targetPartIndex < partNames.length; targetPartIndex += 1) {
+        for (
+          let targetPartIndex = 0;
+          targetPartIndex < partNames.length;
+          targetPartIndex += 1
+        ) {
           let numerator = 0;
           let denominator = 0;
 
-          for (let productIndex = 0; productIndex < products.length; productIndex += 1) {
+          for (
+            let productIndex = 0;
+            productIndex < estimationProducts.length;
+            productIndex += 1
+          ) {
             const coefficient = matrix[productIndex][targetPartIndex];
 
             if (!coefficient) {
@@ -1174,17 +1283,23 @@
 
             let otherPartsValue = 0;
 
-            for (let partIndex = 0; partIndex < partNames.length; partIndex += 1) {
+            for (
+              let partIndex = 0;
+              partIndex < partNames.length;
+              partIndex += 1
+            ) {
               const isTargetPart = partIndex === targetPartIndex;
 
               if (isTargetPart) {
                 continue;
               }
 
-              otherPartsValue += matrix[productIndex][partIndex] * estimates[partIndex];
+              otherPartsValue +=
+                matrix[productIndex][partIndex] * estimates[partIndex];
             }
 
-            numerator += coefficient * (prices[productIndex] - otherPartsValue);
+            numerator +=
+              coefficient * (prices[productIndex] - otherPartsValue);
             denominator += coefficient * coefficient;
           }
 
@@ -1194,13 +1309,12 @@
 
           const nextValue = Math.max(0, numerator / denominator);
           const change = Math.abs(nextValue - estimates[targetPartIndex]);
+
           maxChange = Math.max(maxChange, change);
           estimates[targetPartIndex] = nextValue;
         }
 
-        const isConverged = maxChange < tolerance;
-
-        if (isConverged) {
+        if (maxChange < tolerance) {
           break;
         }
       }
@@ -1402,7 +1516,10 @@
       const partNames = getAllPartNames();
 
       partSuggestions.innerHTML = partNames
-        .map((partName) => `<option value="${escapeHtml(partName)}"></option>`)
+        .map((partName) => {
+          const displayName = getPartDisplayName(partName);
+          return `<option value="${escapeHtml(displayName)}"></option>`;
+        })
         .join("");
     }
 
@@ -1503,7 +1620,7 @@
 
           return `
             <tr>
-              <td><strong>${escapeHtml(partName)}</strong></td>
+              <td><strong>${escapeHtml(getPartDisplayName(partName))}</strong></td>
               <td class="price">${formatPrice(estimatedPrice)}</td>
               <td>${escapeHtml(standaloneText)}</td>
               <td>${escapeHtml(cheapestText)}</td>
